@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Staff Wellness</string>
+
+    <string name="content_description">image</string>
+    <string name="powered">powered by minet</string>
 </resources>
