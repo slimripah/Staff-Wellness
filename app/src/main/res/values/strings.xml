@@ -1,6 +1,29 @@
 <resources>
+
     <string name="app_name">Staff Wellness</string>
 
     <string name="content_description">image</string>
     <string name="powered">powered by minet</string>
+
+    <string name="salute_one">Top of the morning,</string>
+    <string name="salute_two">How is it going?</string>
+    <string name="salute_three">Burning the midnight oil?</string>
+    <string name="user">Watson</string>
+    <string name="emoji_one">👋🏽</string>
+    <string name="emoji_two">😎</string>
+    <string name="emoji_three">😅</string>
+
+    <string name="leaderboard_one"></string>
+    <string name="leaderboard_two"></string>
+    <string name="leaderboard_three"></string>
+    <string name="leaderboard_four"></string>
+    <string name="leaderboard_five"></string>
+    <string name="leaderboard_six"></string>
+    <string name="leaderboard_seven"></string>
+    <string name="leaderboard_eight"></string>
+    <string name="leaderboard_nine"></string>
+    <string name="leaderboard_ten"></string>
+    <string name="leaderboard_eleven"></string>
+    <string name="leaderboard_twelve"></string>
+
 </resources>
