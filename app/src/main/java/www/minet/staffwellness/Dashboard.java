@@ -26,23 +26,4 @@ public class Dashboard extends AppCompatActivity {
 
     }
 
-    private void animateRings() {
-        ImageView ringBlue = findViewById(R.id.ringBlue);
-        ImageView ringGreen = findViewById(R.id.ringGreen);
-        ImageView ringRed = findViewById(R.id.ringRed);
-
-        ObjectAnimator blueAnim = ObjectAnimator.ofInt(ringBlue, "level", 0, 10000);
-        blueAnim.setDuration(1500);
-
-        ObjectAnimator greenAnim = ObjectAnimator.ofInt(ringGreen, "level", 0, 8000);
-        greenAnim.setDuration(1500);
-
-        ObjectAnimator redAnim = ObjectAnimator.ofInt(ringRed, "level", 0, 6000);
-        redAnim.setDuration(1500);
-
-        blueAnim.start();
-        greenAnim.start();
-        redAnim.start();
-    }
-
 }
