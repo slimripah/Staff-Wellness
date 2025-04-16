@@ -62,165 +62,64 @@
             android:text="@string/leaderboard_one"
             android:textColor="@color/black" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="5dp"
-            app:cardCornerRadius="15dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="159dp"
+                android:layout_marginTop="50dp"
+                android:padding="10dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/content_description"
-                    android:src="@drawable/white_em"
-                    android:tint="@color/burgundy"
-                    tools:ignore="UseAppTint" />
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/progressBarBlue"
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:layout_centerInParent="true"
+                    app:cpb_background_progressbar_color="#D6E4FF"
+                    app:cpb_background_progressbar_width="25dp"
+                    app:cpb_progress="90"
+                    app:cpb_progressbar_color="#e74c3c"
+                    app:cpb_progressbar_width="30dp"
+                    app:cpb_round_border="true"
+                    app:cpb_start_angle="0" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/progressBarGreen"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:layout_centerInParent="true"
+                    app:cpb_background_progressbar_color="#DFF5E1"
+                    app:cpb_background_progressbar_width="25dp"
+                    app:cpb_progress="80"
+                    app:cpb_progressbar_color="#9b59b6"
+                    app:cpb_progressbar_width="30dp"
+                    app:cpb_round_border="true"
+                    app:cpb_start_angle="0" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_two" />
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/progressBarRed"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    app:cpb_background_progressbar_color="#FFD6D6"
+                    app:cpb_background_progressbar_width="25dp"
+                    app:cpb_progress="70"
+                    app:cpb_progressbar_color="#f1c40f"
+                    app:cpb_progressbar_width="30dp"
+                    app:cpb_round_border="true"
+                    app:cpb_start_angle="0" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_three" />
+            </RelativeLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_four"
-                        tools:ignore="RelativeOverlap" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_five" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_six" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_seven" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_eight"
-                        tools:ignore="RelativeOverlap" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_nine" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_ten" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_seven" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_eleven"
-                        tools:ignore="RelativeOverlap" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_twelve" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_thirteen" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_seven" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/lineto_circular_pro_bold"
-                        android:text="@string/leaderboard_fourteen"
-                        tools:ignore="RelativeOverlap" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
