@@ -13,17 +13,19 @@
     <string name="emoji_two">😎</string>
     <string name="emoji_three">😅</string>
 
-    <string name="leaderboard_one"></string>
-    <string name="leaderboard_two"></string>
-    <string name="leaderboard_three"></string>
-    <string name="leaderboard_four"></string>
-    <string name="leaderboard_five"></string>
-    <string name="leaderboard_six"></string>
-    <string name="leaderboard_seven"></string>
-    <string name="leaderboard_eight"></string>
-    <string name="leaderboard_nine"></string>
-    <string name="leaderboard_ten"></string>
-    <string name="leaderboard_eleven"></string>
-    <string name="leaderboard_twelve"></string>
+    <string name="leaderboard_one">Leaderboard</string>
+    <string name="leaderboard_two">name</string>
+    <string name="leaderboard_three">department</string>
+    <string name="leaderboard_four">steps</string>
+    <string name="leaderboard_five">1.</string>
+    <string name="leaderboard_six">Watson Muturi</string>
+    <string name="leaderboard_seven">ICT</string>
+    <string name="leaderboard_eight">4603</string>
+    <string name="leaderboard_nine">2.</string>
+    <string name="leaderboard_ten">Evans Wakae</string>
+    <string name="leaderboard_eleven">3978</string>
+    <string name="leaderboard_twelve">3.</string>
+    <string name="leaderboard_thirteen">James Yugi</string>
+    <string name="leaderboard_fourteen">3862</string>
 
 </resources>

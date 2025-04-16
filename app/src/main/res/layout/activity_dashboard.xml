@@ -22,7 +22,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lineto_circular_pro_bold"
-                android:text="@string/salute_one" />
+                android:text="@string/salute_one"
+                android:textColor="@color/black"
+                tools:ignore="RelativeOverlap" />
 
             <TextView
                 android:id="@+id/user"
@@ -30,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/salutations"
                 android:fontFamily="@font/lineto_circular_pro_bold"
-                android:text="@string/user" />
+                android:text="@string/user"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/emoji"
@@ -51,18 +54,171 @@
 
         </RelativeLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lineto_circular_pro_bold"
+            android:text="@string/leaderboard_one"
+            android:textColor="@color/black" />
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginTop="30dp">
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
+            app:cardCornerRadius="15dp">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/white_em"
+                    android:tint="@color/burgundy"
+                    tools:ignore="UseAppTint" />
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
 
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_two" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_three" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_four"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_five" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_six" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_seven" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_eight"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_nine" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_ten" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_seven" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_eleven"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_twelve" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_thirteen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_seven" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/leaderboard_fourteen"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
