@@ -22,4 +22,32 @@
     <string name="leaderboard_seven">3862</string>
     <string name="leaderboard_eight">James Yugi</string>
 
+    <string name="activity">Activity Summary</string>
+    <string name="steps_one">Steps Taken</string>
+    <string name="steps_two">4,603</string>
+    <string name="steps_three">Steps</string>
+    <string name="calories_one">Calories</string>
+    <string name="calories_two">623</string>
+    <string name="calories_three">KCal</string>
+
+    <string-array name="step_values">
+        <item>3200</item>
+        <item>5400</item>
+        <item>4200</item>
+        <item>7000</item>
+        <item>6100</item>
+        <item>8000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="week_days">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
 </resources>

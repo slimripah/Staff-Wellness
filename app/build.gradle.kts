@@ -44,4 +44,7 @@ dependencies {
     //progress bar
     implementation (libs.circularprogressbar)
 
+    //line graph
+    implementation (libs.mpandroidchart)
+
 }
