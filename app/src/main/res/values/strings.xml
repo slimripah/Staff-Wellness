@@ -50,4 +50,13 @@
         <item>Sun</item>
     </string-array>
 
+    <string name="indicator_one">Body Conditions</string>
+    <string name="indicator_two">Heart Rate</string>
+    <string name="indicator_three">124</string>
+    <string name="indicator_four">bpm</string>
+    <string name="indicator_five">BMI</string>
+    <string name="indicator_six">18.8</string>
+    <string name="indicator_seven">pt</string>
+    <string name="indicator_eight">healthy weight</string>
+
 </resources>

@@ -427,7 +427,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="20dp"
             android:background="@color/white"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="10dp">
 
             <RelativeLayout
@@ -439,6 +439,126 @@
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
                     android:layout_margin="20dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/lineto_circular_pro_bold"
+            android:text="@string/indicator_one"
+            android:textColor="@color/black" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_heartbeat"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/heartbeat" />
+
+                <TextView
+                    android:id="@+id/rate_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@id/lottie_heartbeat"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_two" />
+
+                <TextView
+                    android:id="@+id/rate_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rate_title"
+                    android:layout_toEndOf="@id/lottie_heartbeat"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_three" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rate_title"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/rate_data"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_four" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_pulse"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/rate_title"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/pulse" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_bmi"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/bmi" />
+
+                <TextView
+                    android:id="@+id/bmi_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@id/lottie_bmi"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_two" />
+
+                <TextView
+                    android:id="@+id/bmi_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bmi_title"
+                    android:layout_toEndOf="@id/lottie_bmi"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_three" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bmi_title"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/bmi_data"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_four" />
 
             </RelativeLayout>
 

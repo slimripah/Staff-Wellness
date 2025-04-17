@@ -47,4 +47,7 @@ dependencies {
     //line graph
     implementation (libs.mpandroidchart)
 
+    //lottie animations
+    implementation (libs.lottie)
+
 }
