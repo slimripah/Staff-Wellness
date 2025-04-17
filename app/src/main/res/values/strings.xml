@@ -15,17 +15,11 @@
 
     <string name="leaderboard_one">Daily Insights</string>
     <string name="leaderboard_two">leaderboard</string>
-    <string name="leaderboard_three">department</string>
-    <string name="leaderboard_four">steps</string>
-    <string name="leaderboard_five">1.</string>
-    <string name="leaderboard_six">Watson Muturi</string>
-    <string name="leaderboard_seven">ICT</string>
-    <string name="leaderboard_eight">4603</string>
-    <string name="leaderboard_nine">2.</string>
-    <string name="leaderboard_ten">Evans Wakae</string>
-    <string name="leaderboard_eleven">3978</string>
-    <string name="leaderboard_twelve">3.</string>
-    <string name="leaderboard_thirteen">James Yugi</string>
-    <string name="leaderboard_fourteen">3862</string>
+    <string name="leaderboard_three">4603</string>
+    <string name="leaderboard_four">Watson Muturi</string>
+    <string name="leaderboard_five">3978</string>
+    <string name="leaderboard_six">Evans Wakae</string>
+    <string name="leaderboard_seven">3862</string>
+    <string name="leaderboard_eight">James Yugi</string>
 
 </resources>

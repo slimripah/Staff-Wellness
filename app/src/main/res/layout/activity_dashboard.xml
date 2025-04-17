@@ -63,57 +63,173 @@
             android:textColor="@color/black" />
 
         <androidx.cardview.widget.CardView
-            android:layout_width="280dp"
+            android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:layout_margin="16dp"
+            android:layout_margin="20dp"
             android:background="@android:color/white"
             app:cardCornerRadius="20dp"
             app:cardElevation="10dp">
 
+            <TextView
+                android:id="@+id/lead_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/lineto_circular_pro_bold"
+                android:text="@string/leaderboard_two" />
+
             <RelativeLayout
-                android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:id="@+id/lead_relative_one"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp">
+
+                <View
+                    android:id="@+id/view_one"
+                    android:layout_width="4dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#e74c3c" />
+
+                <TextView
+                    android:id="@+id/lead_steps_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/view_one"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_three" />
+
+                <TextView
+                    android:id="@+id/lead_name_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lead_steps_one"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/view_one"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_four" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lead_relative_two"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="85dp">
+
+                <View
+                    android:id="@+id/view_two"
+                    android:layout_width="4dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#9b59b6" />
+
+                <TextView
+                    android:id="@+id/lead_steps_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/view_two"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_five" />
+
+                <TextView
+                    android:id="@+id/lead_name_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lead_steps_two"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/view_two"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_six" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lead_relative_three"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="130dp">
+
+                <View
+                    android:id="@+id/view_three"
+                    android:layout_width="4dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#f1c40f" />
+
+                <TextView
+                    android:id="@+id/lead_steps_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/view_three"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_seven" />
+
+                <TextView
+                    android:id="@+id/lead_name_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lead_steps_three"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/view_three"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_eight" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="350dp"
+                android:layout_height="350dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="159dp"
+                android:layout_marginStart="182dp"
                 android:layout_marginTop="50dp"
                 android:padding="10dp">
 
                 <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/progressBarBlue"
-                    android:layout_width="260dp"
-                    android:layout_height="260dp"
+                    android:layout_width="290dp"
+                    android:layout_height="290dp"
                     android:layout_centerInParent="true"
-                    app:cpb_background_progressbar_color="#D6E4FF"
+                    app:cpb_background_progressbar_color="#fadbd8"
                     app:cpb_background_progressbar_width="25dp"
                     app:cpb_progress="90"
                     app:cpb_progressbar_color="#e74c3c"
-                    app:cpb_progressbar_width="30dp"
+                    app:cpb_progressbar_width="32dp"
                     app:cpb_round_border="true"
                     app:cpb_start_angle="0" />
 
                 <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/progressBarGreen"
-                    android:layout_width="190dp"
-                    android:layout_height="190dp"
+                    android:layout_width="215dp"
+                    android:layout_height="215dp"
                     android:layout_centerInParent="true"
-                    app:cpb_background_progressbar_color="#DFF5E1"
+                    app:cpb_background_progressbar_color="#e8daef"
                     app:cpb_background_progressbar_width="25dp"
                     app:cpb_progress="80"
                     app:cpb_progressbar_color="#9b59b6"
-                    app:cpb_progressbar_width="30dp"
+                    app:cpb_progressbar_width="32dp"
                     app:cpb_round_border="true"
                     app:cpb_start_angle="0" />
 
                 <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/progressBarRed"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
                     android:layout_centerInParent="true"
-                    app:cpb_background_progressbar_color="#FFD6D6"
+                    app:cpb_background_progressbar_color="#f9e79f"
                     app:cpb_background_progressbar_width="25dp"
                     app:cpb_progress="70"
                     app:cpb_progressbar_color="#f1c40f"
-                    app:cpb_progressbar_width="30dp"
+                    app:cpb_progressbar_width="32dp"
                     app:cpb_round_border="true"
                     app:cpb_start_angle="0" />
 
