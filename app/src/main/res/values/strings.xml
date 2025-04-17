@@ -59,4 +59,12 @@
     <string name="indicator_seven">pt</string>
     <string name="indicator_eight">healthy weight</string>
 
+    <string name="sleep_one">Sleep</string>
+    <string name="sleep_two">Bedtime</string>
+    <string name="sleep_three">10:30 PM</string>
+    <string name="sleep_four">Wake Up</string>
+    <string name="sleep_five">5:30 AM</string>
+    <string name="sleep_six">Time In Bed</string>
+    <string name="sleep_seven">7hr 50min</string>
+
 </resources>

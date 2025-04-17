@@ -12,14 +12,19 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.github.mikephil.charting.animation.Easing;
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +36,10 @@ public class Dashboard extends AppCompatActivity {
     LineData linedata;
 
     Typeface typeface;
+
+    BarChart barchart;
+
+    BarDataSet barDataSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +108,68 @@ public class Dashboard extends AppCompatActivity {
         // Other tweaks
         linechart.getDescription().setEnabled(false);
         linechart.invalidate(); // refresh the chart
+
+        barchart = findViewById(R.id.barChart);
+
+        // Sample data in hours (float)
+        float[] hoursPerDay = {5.0f, 6.5f, 7.25f, 8.0f, 5.75f, 6.0f, 7.5f};
+        String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+
+        // Convert to BarEntry list
+        List<BarEntry> entry = new ArrayList<>();
+        for (int i = 0; i < hoursPerDay.length; i++) {
+            entry.add(new BarEntry(i, hoursPerDay[i]));
+        }
+
+        barDataSet = new BarDataSet(entry, "Daily Time");
+        barDataSet.setColor(Color.parseColor("#42A5F5")); // Blue
+        BarData data = new BarData(barDataSet);
+        data.setBarWidth(0.9f);
+
+        barchart.setData(data);
+        barchart.setFitBars(true);
+        barchart.animateY(3000, Easing.EaseInOutQuad);
+
+        // X-Axis formatting
+        XAxis xxAxis = barchart.getXAxis();
+        xxAxis.setValueFormatter(new IndexAxisValueFormatter(days));
+        xxAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xxAxis.setGranularity(1f);
+        xxAxis.setDrawGridLines(false);
+        xxAxis.setDrawLabels(false);
+        xxAxis.setDrawAxisLine(false);
+
+        // Y-Axis formatting for "hh:mm"
+        YAxis yyAxis = barchart.getAxisLeft();
+        yyAxis.setGranularity(0.5f); // half-hour intervals
+        yyAxis.setDrawLabels(false);
+        yyAxis.setDrawGridLines(false);
+        yyAxis.setDrawAxisLine(false);
+
+        yyAxis.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value) {
+                int totalMinutes = Math.round(value * 60f);
+                int hours = totalMinutes / 60;
+                int minutes = totalMinutes % 60;
+                return String.format("%dh %02dm", hours, minutes);
+            }
+        });
+
+        // Disable the right Y-axis
+        barchart.getAxisRight().setEnabled(false);
+
+        // General appearance settings
+        barchart.getDescription().setEnabled(false);
+        barchart.getLegend().setEnabled(false);
+        barchart.invalidate(); // Refresh the chart
+
+        // Remove legend and description
+        barchart.getLegend().setEnabled(false);
+        barchart.getDescription().setEnabled(false);
+
+        // Refresh the chart
+        barchart.invalidate();
 
     }
 
