@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-
-    <color name="burgundy">#d01c24</color>
     <color name="clear">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
 
+    <color name="olive">#a4eb3f</color>
+    <color name="burgundy">#d01c24</color>
     <color name="soot">#191919</color>
+
+    <color name="lilac">#f5f1fd</color>
+    <color name="purple">#c9bef3</color>
+    <color name="sky">#bae5ff</color>
 
 </resources>
