@@ -540,7 +540,7 @@
                     android:layout_marginTop="30dp"
                     android:layout_toEndOf="@id/lottie_bmi"
                     android:fontFamily="@font/lineto_circular_pro_bold"
-                    android:text="@string/indicator_two" />
+                    android:text="@string/indicator_five" />
 
                 <TextView
                     android:id="@+id/bmi_data"
@@ -549,7 +549,7 @@
                     android:layout_below="@id/bmi_title"
                     android:layout_toEndOf="@id/lottie_bmi"
                     android:fontFamily="@font/lineto_circular_pro_bold"
-                    android:text="@string/indicator_three" />
+                    android:text="@string/indicator_six" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -558,7 +558,17 @@
                     android:layout_marginStart="5dp"
                     android:layout_toEndOf="@id/bmi_data"
                     android:fontFamily="@font/lineto_circular_pro_bold"
-                    android:text="@string/indicator_four" />
+                    android:text="@string/indicator_seven" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_arrows"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="45dp"
+                    android:layout_toEndOf="@id/bmi_title"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/arrows" />
 
             </RelativeLayout>
 
