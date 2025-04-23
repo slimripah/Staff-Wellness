@@ -67,4 +67,9 @@
     <string name="sleep_six">Time In Bed</string>
     <string name="sleep_seven">7hr 50min</string>
 
+    <string name="fitness_one">Fitness</string>
+    <string name="fitness_two">Gym</string>
+    <string name="fitness_three">Sports</string>
+    <string name="fitness_four">Recovery</string>
+
 </resources>
