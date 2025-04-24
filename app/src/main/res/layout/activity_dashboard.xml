@@ -34,7 +34,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="@string/content_description"
-                        android:scaleType="fitXY"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_pic" />
 
                 </RelativeLayout>
@@ -459,7 +459,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:background="@color/white"
                 app:cardCornerRadius="15dp"
@@ -483,7 +483,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:fontFamily="@font/lineto_circular_pro_bold"
                 android:text="@string/indicator_one"
                 android:textColor="@color/black" />
@@ -614,7 +614,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:fontFamily="@font/lineto_circular_pro_bold"
                 android:text="@string/sleep_one"
                 android:textColor="@color/black" />
