@@ -122,7 +122,7 @@ public class Dashboard extends AppCompatActivity {
         }
 
         barDataSet = new BarDataSet(entry, "Daily Time");
-        barDataSet.setColor(Color.parseColor("#42A5F5")); // Blue
+        barDataSet.setColor(Color.parseColor("#a4eb3f"));
         BarData data = new BarData(barDataSet);
         data.setBarWidth(0.9f);
 
