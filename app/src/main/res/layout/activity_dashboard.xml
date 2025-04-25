@@ -705,7 +705,8 @@
                                 android:layout_marginTop="18dp"
                                 android:layout_toEndOf="@id/ic_alarm"
                                 android:fontFamily="@font/lineto_circular_pro_bold"
-                                android:text="@string/sleep_four" />
+                                android:text="@string/sleep_four"
+                                tools:ignore="TooManyViews" />
 
                             <TextView
                                 android:layout_width="wrap_content"
