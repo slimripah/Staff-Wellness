@@ -1,8 +1,10 @@
 package www.minet.staffwellness;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +43,8 @@ public class Dashboard extends AppCompatActivity {
 
     BarDataSet barDataSet;
 
+    Button steps;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +55,13 @@ public class Dashboard extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        steps = findViewById(R.id.btn_steps);
+
+        steps.setOnClickListener(v -> {
+            Intent intent = new Intent(Dashboard.this, Steps.class);
+            startActivity(intent);
         });
 
         typeface = ResourcesCompat.getFont(this, R.font.lineto_circular_pro_bold);

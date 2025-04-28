@@ -72,4 +72,10 @@
     <string name="fitness_three">Sports</string>
     <string name="fitness_four">Recovery</string>
 
+    <string name="step_one">today</string>
+    <string name="step_two">4,603</string>
+    <string name="step_three"></string>
+    <string name="step_four"></string>
+    <string name="step_five"></string>
+
 </resources>
