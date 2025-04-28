@@ -74,8 +74,19 @@
 
     <string name="step_one">today</string>
     <string name="step_two">4,603</string>
-    <string name="step_three"></string>
-    <string name="step_four"></string>
-    <string name="step_five"></string>
+    <string name="step_three">Stats</string>
+    <string name="step_four">Calories Burned</string>
+    <string name="step_five">burned</string>
+    <string name="step_six">67 kcal</string>
+    <string name="step_seven">remaining</string>
+    <string name="step_eight">23 kcal</string>
+    <string name="step_nine">Distance Covered</string>
+    <string name="step_ten">2 Kms</string>
+    <string name="step_eleven">Move Minutes</string>
+    <string name="step_twelve">114</string>
+    <string name="step_thirteen">mins</string>
+    <string name="step_fourteen">Walking Speed</string>
+    <string name="step_fifteen">1.10</string>
+    <string name="step_sixteen">mps</string>
 
 </resources>
