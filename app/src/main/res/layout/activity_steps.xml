@@ -65,7 +65,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="30dp">
 
             <GridLayout
@@ -74,8 +74,6 @@
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
                 android:rowCount="2"
-                android:rowOrderPreserved="false"
-                android:useDefaultMargins="true"
                 tools:ignore="UselessParent">
 
                 <androidx.cardview.widget.CardView
@@ -83,9 +81,10 @@
                     android:layout_height="250dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
                     app:cardBackgroundColor="#f4f4f4"
                     app:cardCornerRadius="15dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="2dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -162,9 +161,10 @@
                     android:layout_height="200dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
                     app:cardBackgroundColor="#f4f4f4"
                     app:cardCornerRadius="15dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="2dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -212,9 +212,10 @@
                     android:layout_height="200dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
                     app:cardBackgroundColor="#f4f4f4"
                     app:cardCornerRadius="15dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="2dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -277,9 +278,10 @@
                     android:layout_height="250dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
                     app:cardBackgroundColor="#f4f4f4"
                     app:cardCornerRadius="15dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="2dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
