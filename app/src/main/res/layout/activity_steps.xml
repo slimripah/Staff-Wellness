@@ -346,7 +346,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/lineto_circular_pro_bold"
-            android:text="@string/step_seventeen"
+            android:text="@string/step_twentyThree"
             android:textColor="@color/black" />
 
         <RelativeLayout
