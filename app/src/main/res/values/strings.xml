@@ -93,10 +93,20 @@
     <string name="step_nineteen">5</string>
     <string name="step_twenty">Highlights</string>
     <string name="step_twentyOne">Goals</string>
-    <string name="step_twentyTwo">Walking Routes</string>
+    <string name="step_twentyTwo">My Map</string>
     <string name="step_twentyThree">Metrics</string>
-    <string name="step_twentyFour"></string>
-    <string name="step_twentyFive"></string>
-    <string name="step_twentySix"></string>
+    <string name="step_twentyFour">walking route</string>
+    <string name="step_twentyFive">2 kms</string>
+    <string name="step_twentySix">route length</string>
+    <string name="step_twentySeven">127 m</string>
+    <string name="step_twentyEight">elevation gain</string>
+    <string name="step_twentyNine">4489</string>
+    <string name="step_thirty">steps</string>
+    <string name="step_thirtyOne">1.10</string>
+    <string name="step_thirtyTwo">mps</string>
+    <string name="step_thirtyThree">47</string>
+    <string name="step_thirtyFour">mins</string>
+    <string name="step_thirtyFive">469</string>
+    <string name="step_thirtySix">kcal</string>
 
 </resources>
