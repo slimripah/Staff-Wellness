@@ -98,9 +98,9 @@
     <string name="step_twentyFour">walking route</string>
     <string name="step_twentyFive">2 kms</string>
     <string name="step_twentySix">route length</string>
-    <string name="step_twentySeven">127 m</string>
+    <string name="step_twentySeven">12 m</string>
     <string name="step_twentyEight">elevation gain</string>
-    <string name="step_twentyNine">4489</string>
+    <string name="step_twentyNine">4,489</string>
     <string name="step_thirty">steps</string>
     <string name="step_thirtyOne">1.10</string>
     <string name="step_thirtyTwo">mps</string>

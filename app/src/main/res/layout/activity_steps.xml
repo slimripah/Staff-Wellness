@@ -530,21 +530,247 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="330dp"
             android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
             app:cardBackgroundColor="#f4f4f4"
             app:cardCornerRadius="15dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp">
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lineto_circular_pro_bold"
-                    android:text="@string/step_twentyFour" />
+                    android:text="@string/step_twentyFour"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/walkmap_relay_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/walkmap_route"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/step_twentyFive" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/walkmap_route"
+                        android:fontFamily="@font/lineto_circular_pro_book"
+                        android:text="@string/step_twentySix"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/walkmap_relay_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@id/walkmap_relay_one">
+
+                    <TextView
+                        android:id="@+id/walkmap_elevation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/step_twentySeven" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/walkmap_elevation"
+                        android:fontFamily="@font/lineto_circular_pro_book"
+                        android:text="@string/step_twentyEight"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/walkmap_relay_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@id/walkmap_relay_two">
+
+                    <TextView
+                        android:id="@+id/walkmap_steps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lineto_circular_pro_bold"
+                        android:text="@string/step_twentyNine" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/walkmap_steps"
+                        android:fontFamily="@font/lineto_circular_pro_book"
+                        android:text="@string/step_thirty"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:layout_below="@id/walkmap_relay_three"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/route_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/content_description"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_route" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="#f4f4f4"
+                    app:cardCornerRadius="12dp">
+
+                    <RelativeLayout
+                        android:id="@+id/relay_pace"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ic_path"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_path"
+                            android:tint="#4169E1"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:id="@+id/walkmap_pace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@id/ic_path"
+                            android:fontFamily="@font/lineto_circular_pro_bold"
+                            android:text="@string/step_thirtyOne"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_toEndOf="@id/ic_path"
+                            android:fontFamily="@font/lineto_circular_pro_book"
+                            android:text="@string/step_thirtyTwo"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relay_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="100dp"
+                        tools:ignore="TooManyViews">
+
+                        <ImageView
+                            android:id="@+id/ic_time"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_time"
+                            android:tint="#4169E1"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:id="@+id/walkmap_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@id/ic_time"
+                            android:fontFamily="@font/lineto_circular_pro_bold"
+                            android:text="@string/step_thirtyThree"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_toEndOf="@id/ic_time"
+                            android:fontFamily="@font/lineto_circular_pro_book"
+                            android:text="@string/step_thirtyFour"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relay_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:id="@+id/ic_calories"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:contentDescription="@string/content_description"
+                            android:src="@drawable/ic_calories"
+                            android:tint="#4169E1"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:id="@+id/walkmap_calories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toEndOf="@id/ic_calories"
+                            android:fontFamily="@font/lineto_circular_pro_bold"
+                            android:text="@string/step_thirtyFive"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_toEndOf="@id/ic_calories"
+                            android:fontFamily="@font/lineto_circular_pro_book"
+                            android:text="@string/step_thirtySix"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </RelativeLayout>
 
