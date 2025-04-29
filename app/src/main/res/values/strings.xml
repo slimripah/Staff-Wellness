@@ -88,5 +88,15 @@
     <string name="step_fourteen">Walking Speed</string>
     <string name="step_fifteen">1.10</string>
     <string name="step_sixteen">mps</string>
+    <string name="step_seventeen">Trends</string>
+    <string name="step_eighteen">Flights Climbed</string>
+    <string name="step_nineteen">5</string>
+    <string name="step_twenty">Highlights</string>
+    <string name="step_twentyOne">Goals</string>
+    <string name="step_twentyTwo">Walking Routes</string>
+    <string name="step_twentyThree"></string>
+    <string name="step_twentyFour"></string>
+    <string name="step_twentyFive"></string>
+    <string name="step_twentySix"></string>
 
 </resources>
