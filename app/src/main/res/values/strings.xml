@@ -70,7 +70,7 @@
     <string name="fitness_one">Fitness</string>
     <string name="fitness_two">Gym</string>
     <string name="fitness_three">Sports</string>
-    <string name="fitness_four">Recovery</string>
+    <string name="fitness_four">Activities</string>
 
     <string name="step_one">today</string>
     <string name="step_two">4,603</string>
@@ -112,7 +112,13 @@
     <string name="calory_one">Today</string>
     <string name="calory_two">623</string>
     <string name="calory_three">kcal</string>
-    <string name="calory_four"></string>
-    <string name="calory_five"></string>
+    <string name="calory_four">walking</string>
+    <string name="calory_five">gym</string>
+    <string name="calory_six">sports</string>
+    <string name="calory_seven">activities</string>
+    <string name="calory_eight">123 kcal</string>
+    <string name="calory_nine">200 kcal</string>
+    <string name="calory_ten">100 kcal</string>
+    <string name="calory_eleven">100 kcal</string>
 
 </resources>

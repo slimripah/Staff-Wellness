@@ -18,7 +18,6 @@ public class Calories extends AppCompatActivity {
     VerticalProgressBar progressBar;
     TextView caloryText;
     RelativeLayout container;
-    TextView caloryCountText;
     String countStr;
     int targetCalories;
 
@@ -90,7 +89,7 @@ public class Calories extends AppCompatActivity {
 
         // Animate progress from 0 to targetCalories
         ValueAnimator animator = ValueAnimator.ofFloat(0, targetCalories);
-        animator.setDuration(1500); // 1.5 seconds
+        animator.setDuration(3500); // 1.5 seconds
         animator.addUpdateListener(animation -> {
             float currentValue = (float) animation.getAnimatedValue();
             progressBar.setProgress(currentValue);
