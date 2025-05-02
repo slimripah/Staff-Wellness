@@ -37,7 +37,7 @@ public class Calories extends AppCompatActivity {
         progressBar = findViewById(R.id.vertical_progress);
         caloryText = findViewById(R.id.calory_count);
         container = findViewById(R.id.calory_progress_container);
-        countStr = caloryCountText.getText().toString().replaceAll("[^0-9]", "");
+        countStr = caloryText.getText().toString().replaceAll("[^0-9]", "");
         targetCalories = Integer.parseInt(countStr);
 
         // Parse kcal value

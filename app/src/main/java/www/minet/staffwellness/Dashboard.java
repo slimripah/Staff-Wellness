@@ -44,6 +44,7 @@ public class Dashboard extends AppCompatActivity {
     BarDataSet barDataSet;
 
     Button steps;
+    Button calories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +59,15 @@ public class Dashboard extends AppCompatActivity {
         });
 
         steps = findViewById(R.id.btn_steps);
+        calories = findViewById(R.id.btn_calories);
 
         steps.setOnClickListener(v -> {
             Intent intent = new Intent(Dashboard.this, Steps.class);
+            startActivity(intent);
+        });
+
+        calories.setOnClickListener(v -> {
+            Intent intent = new Intent(Dashboard.this, Calories.class);
             startActivity(intent);
         });
 
