@@ -99,6 +99,4 @@ public class Calories extends AppCompatActivity {
 
     }
 
-
-
 }
