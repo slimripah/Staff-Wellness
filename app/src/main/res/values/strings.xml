@@ -109,4 +109,10 @@
     <string name="step_thirtyFive">469</string>
     <string name="step_thirtySix">kcal</string>
 
+    <string name="calory_one">Today</string>
+    <string name="calory_two">623</string>
+    <string name="calory_three">kcal</string>
+    <string name="calory_four"></string>
+    <string name="calory_five"></string>
+
 </resources>
