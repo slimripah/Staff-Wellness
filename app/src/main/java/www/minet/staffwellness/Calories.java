@@ -49,43 +49,45 @@ public class Calories extends AppCompatActivity {
 
         progressBar.setProgress(kcal);
 
-        int barHeight = 500; // in dp
-        int labelCount = 21; // 0 to 1000 kcal, every 50 kcal
+        progressBar.post(() -> {
+            int barHeight = progressBar.getHeight(); // get actual height
+            int labelCount = 21; // 0 to 1000 kcal, every 50 kcal
 
-        for (int i = 0; i < labelCount; i++) {
-            int value = 1000 - (i * 50);
-            TextView label = new TextView(this);
-            label.setText(value + " kcal");
-            label.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
-            label.setTypeface(getResources().getFont(R.font.lineto_circular_pro_bold));
+            for (int i = 0; i < labelCount; i++) {
+                int value = 50 * (i + 1); // scale to start from 50 up to 1050
+                TextView label = new TextView(this);
+                label.setText(value + " kcal");
+                label.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+                label.setTypeface(getResources().getFont(R.font.lineto_circular_pro_bold));
 
-            // Convert 10dp margin to pixels
-            int margin = (int) TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
+                int margin = (int) TypedValue.applyDimension(
+                        TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
 
-            // Y position based on bar height
-            float ratio = i / (float) (labelCount - 1);
-            int yOffset = (int) (barHeight * ratio);
+                // Calculate Y offset from bottom to top
+                float ratio = i / (float) (labelCount - 1);
+                int yOffset = (int) (barHeight - (ratio * barHeight)); // bottom = 0 kcal
 
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-            );
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                );
 
-            // Alternate sides
-            if (i % 2 == 0) {
-                params.addRule(RelativeLayout.LEFT_OF, progressBar.getId());
-                params.setMarginEnd(margin);
-            } else {
-                params.addRule(RelativeLayout.RIGHT_OF, progressBar.getId());
-                params.setMarginStart(margin);
+                if (i % 2 == 0) {
+                    params.addRule(RelativeLayout.LEFT_OF, progressBar.getId());
+                    params.setMarginEnd(margin);
+                } else {
+                    params.addRule(RelativeLayout.RIGHT_OF, progressBar.getId());
+                    params.setMarginStart(margin);
+                }
+
+                label.setLayoutParams(params);
+                label.setTranslationY(yOffset - label.getHeight() / 2f); // Center align
+
+                container.addView(label);
+
             }
 
-            label.setLayoutParams(params);
-            label.setTranslationY(yOffset - (barHeight / 2f)); // Center-based offset
-            container.addView(label);
-
-        }
+        });
 
         // Animate progress from 0 to targetCalories
         ValueAnimator animator = ValueAnimator.ofFloat(0, targetCalories);
