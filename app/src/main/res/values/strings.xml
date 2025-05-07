@@ -121,7 +121,7 @@
     <string name="calory_ten">100 kcal</string>
     <string name="calory_eleven">100 kcal</string>
 
-    <string name="heart_one">Heart Conditions</string>
+    <string name="heart_one">Heart\nConditions</string>
     <string name="heart_two">Heart Rate</string>
     <string name="heart_three">124 bpm</string>
     <string name="heart_four">Temperature</string>
