@@ -129,14 +129,19 @@
     <string name="heart_six">38.9°</string>
     <string name="heart_seven">Heart Rate</string>
     <string name="heart_eight">bpm</string>
-    <string name="heart_nine">Glucose</string>
-    <string name="heart_ten">mg/dl</string>
-    <string name="heart_eleven">Cholesterol</string>
-    <string name="heart_twelve">mg/dl</string>
-    <string name="heart_thirteen">Height</string>
-    <string name="heart_fourteen">cms</string>
-    <string name="heart_fifteen">Weight</string>
-    <string name="heart_sixteen">kgs</string>
-    <string name="heart_seventeen">Bmi</string>
+    <string name="heart_nine">124</string>
+    <string name="heart_ten">Glucose</string>
+    <string name="heart_eleven">mg/dl</string>
+    <string name="heart_twelve">75</string>
+    <string name="heart_thirteen">Cholesterol</string>
+    <string name="heart_fourteen">mg/dl</string>
+    <string name="heart_fifteen">200</string>
+    <string name="heart_sixteen">Height</string>
+    <string name="heart_seventeen">cms</string>
+    <string name="heart_eighteen">180</string>
+    <string name="heart_nineteen">Weight</string>
+    <string name="heart_twenty">kgs</string>
+    <string name="heart_twentyOne">73</string>
+    <string name="heart_twentyTwo">Bmi</string>
 
 </resources>
