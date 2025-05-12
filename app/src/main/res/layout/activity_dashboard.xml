@@ -544,6 +544,12 @@
                         app:lottie_loop="true"
                         app:lottie_rawRes="@raw/pulse" />
 
+                    <Button
+                        android:id="@+id/btn_heart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/clear" />
+
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>

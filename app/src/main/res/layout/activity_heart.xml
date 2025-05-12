@@ -16,7 +16,7 @@
         android:textSize="16sp" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottie_heartbeat"
+        android:id="@+id/lottie_heart"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         app:lottie_autoPlay="true"
