@@ -1,26 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     tools:context=".Heart">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lineto_circular_pro_bold"
-        android:text="@string/heart_one"
-        android:textSize="16sp" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottie_heart"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/heartbeat" />
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lineto_circular_pro_bold"
+            android:text="@string/heart_one"
+            android:textSize="16sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_heart"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="150dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/heartbeat" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/lottie_heart"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/rate_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_two" />
+
+                <TextView
+                    android:id="@+id/rate_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rate_title"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_three" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rate_title"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/rate_data"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/indicator_four" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_pulse"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/rate_title"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/pulse" />
+
+                <Button
+                    android:id="@+id/btn_heart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/clear" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

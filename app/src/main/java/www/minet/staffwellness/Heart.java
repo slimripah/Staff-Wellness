@@ -27,8 +27,8 @@ public class Heart extends AppCompatActivity {
         });
 
         animationView = findViewById(R.id.lottie_heart);
-        animationView.setScaleX(2.5f);
-        animationView.setScaleY(2.5f);
+        animationView.setScaleX(1.8f);
+        animationView.setScaleY(1.8f);
 
     }
 
