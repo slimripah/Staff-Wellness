@@ -144,4 +144,7 @@
     <string name="heart_twentyOne">73</string>
     <string name="heart_twentyTwo">Bmi</string>
 
+    <string name="schedule_one">Edit Your Schedule</string>
+    <string name="schedule_two">Save</string>
+
 </resources>
