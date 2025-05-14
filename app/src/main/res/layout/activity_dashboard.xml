@@ -716,6 +716,7 @@
                                 tools:ignore="TooManyViews" />
 
                             <TextView
+                                android:id="@+id/go_up"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/ic_alarm"
