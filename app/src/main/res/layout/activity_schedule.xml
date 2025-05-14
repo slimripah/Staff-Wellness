@@ -7,4 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".Schedule">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Your Schedule"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <www.minet.staffwellness.SleepCircleView
+        android:id="@+id/sleep_circle"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/sleep_duration"
+        android:layout_below="@id/sleep_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7 hr"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
 </RelativeLayout>
