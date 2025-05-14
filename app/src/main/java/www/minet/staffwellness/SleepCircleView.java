@@ -80,6 +80,25 @@ public class SleepCircleView extends View {
         // Draw text: sleep duration
         int hours = (int) (sweepAngle / 15); // each 15 degrees = 1 hour
         canvas.drawText(hours + " hr", centerX, centerY + 15, textPaint);
+
+        String bedtimeStr = angleToTimeString(bedtimeAngle);
+        String wakeupStr = angleToTimeString(wakeupAngle);
+
+        // Draw bedtime label
+        canvas.drawText("Bedtime: " + bedtimeStr, centerX, centerY + radius + 60, textPaint);
+
+        // Draw wake-up label
+        canvas.drawText("Wake-up: " + wakeupStr, centerX, centerY + radius + 120, textPaint);
+
+    }
+
+    private String angleToTimeString(double angle) {
+        int totalMinutes = (int) ((angle / 360) * 1440);
+        int hours = (totalMinutes / 60) % 24;
+        int minutes = totalMinutes % 60;
+        String amPm = hours >= 12 ? "PM" : "AM";
+        int displayHour = (hours % 12 == 0) ? 12 : hours % 12;
+        return String.format("%02d:%02d %s", displayHour, minutes, amPm);
     }
 
     private float[] angleToXY(double angleDegrees) {
