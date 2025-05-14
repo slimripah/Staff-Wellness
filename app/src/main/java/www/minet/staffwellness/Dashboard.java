@@ -1,9 +1,12 @@
 package www.minet.staffwellness;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Pair;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -74,8 +77,15 @@ public class Dashboard extends AppCompatActivity {
         });
 
         heart.setOnClickListener(v -> {
+
             Intent intent = new Intent(Dashboard.this, Heart.class);
-            startActivity(intent);
+
+            //add transition
+            Pair[] pairs = new Pair[1];
+            pairs[0] = new Pair<View, String>(findViewById(R.id.lottie_heartbeat),"pulsating");
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
+
+            startActivity(intent, options.toBundle());
         });
 
         typeface = ResourcesCompat.getFont(this, R.font.lineto_circular_pro_bold);

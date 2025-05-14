@@ -127,9 +127,9 @@
     <string name="heart_four">Temperature</string>
     <string name="heart_five">celsius</string>
     <string name="heart_six">38.9°</string>
-    <string name="heart_seven">Heart Rate</string>
-    <string name="heart_eight">bpm</string>
-    <string name="heart_nine">124</string>
+    <string name="heart_seven">Blood Pressure</string>
+    <string name="heart_eight">mmHg</string>
+    <string name="heart_nine">120/80</string>
     <string name="heart_ten">Glucose</string>
     <string name="heart_eleven">mg/dl</string>
     <string name="heart_twelve">75</string>

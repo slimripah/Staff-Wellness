@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_marginStart="30dp"
+            android:transitionName="pulsating"
             android:layout_marginTop="150dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
@@ -115,7 +116,7 @@
                     tools:ignore="UselessParent">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/steps"
+                        android:id="@+id/pressure"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -126,15 +127,66 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp">
 
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_pressure" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="2.5dp"
+                                android:fontFamily="@font/lineto_circular_pro_bold"
+                                android:text="@string/heart_seven"
+                                tools:ignore="RelativeOverlap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="19dp"
+                                android:fontFamily="@font/lineto_circular_pro_book"
+                                android:text="@string/heart_eight"
+                                tools:ignore="RelativeOverlap" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lottie_pressure"
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="50dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/pressure" />
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="45dp"
+                                android:background="@drawable/bg_heart_layout">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lineto_circular_pro_bold"
+                                    android:text="@string/heart_nine"
+                                    android:textSize="13sp"
+                                    tools:ignore="TooDeepLayout" />
+
+                            </RelativeLayout>
 
                         </RelativeLayout>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/promotion"
+                        android:id="@+id/temperature"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -145,9 +197,381 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp">
 
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_temp" />
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="2.5dp"
+                                android:fontFamily="@font/lineto_circular_pro_bold"
+                                android:text="@string/heart_four"
+                                tools:ignore="RelativeOverlap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="19dp"
+                                android:fontFamily="@font/lineto_circular_pro_book"
+                                android:text="@string/heart_five"
+                                tools:ignore="RelativeOverlap" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lottie_temperature"
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="50dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/temperature" />
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="45dp"
+                                android:background="@drawable/bg_heart_layout">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lineto_circular_pro_bold"
+                                    android:text="@string/heart_six"
+                                    android:textSize="13sp"
+                                    tools:ignore="TooDeepLayout" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/heart_relay_two"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/heart_relay_one">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    tools:ignore="UselessParent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cholesterol"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_cholesterol" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="2.5dp"
+                                android:fontFamily="@font/lineto_circular_pro_bold"
+                                android:text="@string/heart_thirteen"
+                                tools:ignore="RelativeOverlap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="19dp"
+                                android:fontFamily="@font/lineto_circular_pro_book"
+                                android:text="@string/heart_fourteen"
+                                tools:ignore="RelativeOverlap" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lottie_cholesterol"
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="50dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/cholesterol" />
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="45dp"
+                                android:background="@drawable/bg_heart_layout">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lineto_circular_pro_bold"
+                                    android:text="@string/heart_fifteen"
+                                    android:textSize="13sp"
+                                    tools:ignore="TooDeepLayout" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/glucose"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_glucose" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="2.5dp"
+                                android:fontFamily="@font/lineto_circular_pro_bold"
+                                android:text="@string/heart_ten"
+                                tools:ignore="RelativeOverlap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="19dp"
+                                android:fontFamily="@font/lineto_circular_pro_book"
+                                android:text="@string/heart_eleven"
+                                tools:ignore="RelativeOverlap" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lottie_glucose"
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="50dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/glucose" />
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="45dp"
+                                android:background="@drawable/bg_heart_layout">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lineto_circular_pro_bold"
+                                    android:text="@string/heart_twelve"
+                                    android:textSize="13sp"
+                                    tools:ignore="TooDeepLayout" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/heart_relay_three"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/heart_relay_two">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    tools:ignore="UselessParent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/weight"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_weight" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="2.5dp"
+                                android:fontFamily="@font/lineto_circular_pro_bold"
+                                android:text="@string/heart_nineteen"
+                                tools:ignore="RelativeOverlap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="19dp"
+                                android:fontFamily="@font/lineto_circular_pro_book"
+                                android:text="@string/heart_twenty"
+                                tools:ignore="RelativeOverlap" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lottie_weight"
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="50dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/weight" />
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="45dp"
+                                android:background="@drawable/bg_heart_layout">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lineto_circular_pro_bold"
+                                    android:text="@string/heart_twentyOne"
+                                    android:textSize="13sp"
+                                    tools:ignore="TooDeepLayout" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/height"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_heights" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="2.5dp"
+                                android:fontFamily="@font/lineto_circular_pro_bold"
+                                android:text="@string/heart_sixteen"
+                                tools:ignore="RelativeOverlap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="19dp"
+                                android:fontFamily="@font/lineto_circular_pro_book"
+                                android:text="@string/heart_seventeen"
+                                tools:ignore="RelativeOverlap" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lottie_height"
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="50dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/height" />
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="70dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="45dp"
+                                android:background="@drawable/bg_heart_layout">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lineto_circular_pro_bold"
+                                    android:text="@string/heart_eighteen"
+                                    android:textSize="13sp"
+                                    tools:ignore="TooDeepLayout" />
+
+                            </RelativeLayout>
 
                         </RelativeLayout>
 
