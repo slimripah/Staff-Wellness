@@ -19,7 +19,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="265dp"
+        android:layout_marginTop="260dp"
         android:contentDescription="@string/content_description"
         android:src="@drawable/ic_moon" />
 
@@ -61,7 +61,9 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:contentDescription="@string/content_description"
-                android:src="@drawable/ic_bed" />
+                android:src="@drawable/ic_bed"
+                android:tint="#668c5c"
+                tools:ignore="UseAppTint" />
 
             <TextView
                 android:id="@+id/bedtime_label"
@@ -102,7 +104,9 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:contentDescription="@string/content_description"
-                android:src="@drawable/ic_alarm" />
+                android:src="@drawable/ic_alarm"
+                android:tint="#668c5c"
+                tools:ignore="UseAppTint" />
 
             <TextView
                 android:id="@+id/wakeup_label"

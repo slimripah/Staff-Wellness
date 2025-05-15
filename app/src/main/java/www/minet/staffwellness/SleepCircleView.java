@@ -11,6 +11,9 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
+import android.os.Build;
 
 import androidx.annotation.Nullable;
 
@@ -32,7 +35,20 @@ public class SleepCircleView extends View {
 
     private Bitmap bedIconBitmap, alarmIconBitmap;
 
+    private Vibrator vibrator;
+
+    private void vibrateOnChange() {
+        if (vibrator != null && vibrator.hasVibrator()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(10, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibrator.vibrate(10);
+            }
+        }
+    }
+
     private void init() {
+
         circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         circlePaint.setColor(Color.LTGRAY);
         circlePaint.setStyle(Paint.Style.STROKE);
@@ -62,6 +78,8 @@ public class SleepCircleView extends View {
         int iconSize = 35; // adjust as needed
         bedIconBitmap = Bitmap.createScaledBitmap(bedIconBitmap, iconSize, iconSize, true);
         alarmIconBitmap = Bitmap.createScaledBitmap(alarmIconBitmap, iconSize, iconSize, true);
+
+        vibrator = (Vibrator) getContext().getSystemService(Context.VIBRATOR_SERVICE);
 
     }
 
@@ -202,9 +220,11 @@ public class SleepCircleView extends View {
             case MotionEvent.ACTION_MOVE:
                 if (movingStart) {
                     bedtimeAngle = angle;
+                    vibrateOnChange();
                     invalidate();
                 } else if (movingEnd) {
                     wakeupAngle = angle;
+                    vibrateOnChange();
                     invalidate();
                 }
                 // Notify listener of the change
