@@ -44,10 +44,6 @@ public class SleepCircleView extends View {
         arcPaint.setStrokeWidth(80);
         arcPaint.setStrokeCap(Paint.Cap.ROUND);
 
-        thumbPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        thumbPaint.setColor(Color.DKGRAY);
-        thumbPaint.setStyle(Paint.Style.FILL);
-
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textPaint.setTextSize(30f);
         textPaint.setTextAlign(Paint.Align.CENTER);
