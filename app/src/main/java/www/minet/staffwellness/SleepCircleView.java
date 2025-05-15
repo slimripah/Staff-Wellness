@@ -55,11 +55,11 @@ public class SleepCircleView extends View {
         clockLabelPaint.setTextAlign(Paint.Align.CENTER);
         clockLabelPaint.setTypeface(getResources().getFont(R.font.lineto_circular_pro_bold));
 
-        bedIconBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_bed);
-        alarmIconBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_alarm);
+        bedIconBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_schedule_bed);
+        alarmIconBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_schedule_alarm);
 
         // Resize icons to fit nicely over the thumb
-        int iconSize = 30; // adjust as needed
+        int iconSize = 35; // adjust as needed
         bedIconBitmap = Bitmap.createScaledBitmap(bedIconBitmap, iconSize, iconSize, true);
         alarmIconBitmap = Bitmap.createScaledBitmap(alarmIconBitmap, iconSize, iconSize, true);
 
@@ -90,7 +90,7 @@ public class SleepCircleView extends View {
 
             float labelPadding = TypedValue.applyDimension(
                     TypedValue.COMPLEX_UNIT_DIP,
-                    20,
+                    25,
                     getResources().getDisplayMetrics()
             );
             float labelRadius = radius - (circlePaint.getStrokeWidth() / 2f) - labelPadding;
@@ -114,6 +114,28 @@ public class SleepCircleView extends View {
             canvas.drawText(label, x, y, clockLabelPaint);
         }
 
+        // Draw minute tick marks inside the ring
+        for (int i = 0; i < 60; i++) {
+            double angle = Math.toRadians(i * 6 - 90); // 12 o'clock at top
+
+            // Adjusted to draw ticks just inside the stroke
+            float outerRadius = radius - (circlePaint.getStrokeWidth() / 2f);
+            float innerRadius = i % 5 == 0
+                    ? outerRadius - 25
+                    : outerRadius - 15;
+
+            float startX = (float) (centerX + innerRadius * Math.cos(angle));
+            float startY = (float) (centerY + innerRadius * Math.sin(angle));
+            float endX = (float) (centerX + outerRadius * Math.cos(angle));
+            float endY = (float) (centerY + outerRadius * Math.sin(angle));
+
+            Paint tickPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+            tickPaint.setColor(Color.GRAY);
+            tickPaint.setStrokeWidth(i % 5 == 0 ? 4 : 2);
+            canvas.drawLine(startX, startY, endX, endY, tickPaint);
+        }
+
+
         // Draw bedtime thumb
         float[] bedXY = angleToXY(bedtimeAngle, centerX, centerY, radius);
         canvas.drawBitmap(bedIconBitmap, bedXY[0] - bedIconBitmap.getWidth() / 2f, bedXY[1] - bedIconBitmap.getHeight() / 2f, null);
@@ -125,6 +147,7 @@ public class SleepCircleView extends View {
         // Draw sleep duration text
         int hours = (int) (sweepAngle / 15); // 15 degrees = 1 hour
         canvas.drawText(hours + " hr", centerX, centerY + 15, textPaint);
+
     }
 
     private float[] angleToXY(double angleDegrees, float centerX, float centerY, float radius) {
