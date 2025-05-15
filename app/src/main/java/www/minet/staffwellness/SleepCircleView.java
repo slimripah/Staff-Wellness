@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -49,8 +50,8 @@ public class SleepCircleView extends View {
 
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textPaint.setTextSize(30f);
-        textPaint.setColor(Color.BLACK);
         textPaint.setTextAlign(Paint.Align.CENTER);
+        textPaint.setTypeface(getResources().getFont(R.font.lineto_circular_pro_bold));
 
         clockLabelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         clockLabelPaint.setColor(Color.DKGRAY);
@@ -62,7 +63,7 @@ public class SleepCircleView extends View {
         alarmIconBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_alarm);
 
         // Resize icons to fit nicely over the thumb
-        int iconSize = 60; // adjust as needed
+        int iconSize = 30; // adjust as needed
         bedIconBitmap = Bitmap.createScaledBitmap(bedIconBitmap, iconSize, iconSize, true);
         alarmIconBitmap = Bitmap.createScaledBitmap(alarmIconBitmap, iconSize, iconSize, true);
 
@@ -91,7 +92,12 @@ public class SleepCircleView extends View {
             int hour = (i * 2) % 24;  // every 2 hours
             double angle = Math.toRadians(i * 30); // 30 degrees per label
 
-            float labelRadius = radius - 50;
+            float labelPadding = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    20,
+                    getResources().getDisplayMetrics()
+            );
+            float labelRadius = radius - (circlePaint.getStrokeWidth() / 2f) - labelPadding;
             float x = (float) (centerX + labelRadius * Math.cos(angle - Math.PI / 2));
             float y = (float) (centerY + labelRadius * Math.sin(angle - Math.PI / 2)) + 10;
 
