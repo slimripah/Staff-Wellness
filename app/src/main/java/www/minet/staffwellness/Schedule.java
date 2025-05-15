@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +25,8 @@ public class Schedule extends AppCompatActivity {
     SharedPreferences prefs;
     String savedBedtime;
     String savedWakeup;
-    private SleepCircleView circularSlider;
+    TextView bedtimeTime;
+    TextView wakeupTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,16 @@ public class Schedule extends AppCompatActivity {
 
             String bedtime = sleepView.getBedtime();
             String wakeup = sleepView.getWakeup();
+
+            // Save to SharedPreferences
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("bedtime", bedtime);
+            editor.putString("wakeup", wakeup);
+            editor.apply();
+
+            // Update UI
+            bedtimeTime.setText(bedtime);
+            wakeupTime.setText(wakeup);
 
             Intent resultIntent = new Intent();
             resultIntent.putExtra("BEDTIME", bedtime);
@@ -67,6 +79,12 @@ public class Schedule extends AppCompatActivity {
             sleepView.setEndTime(wakeupMinutes);
 
         }
+
+        bedtimeTime = findViewById(R.id.bedtime_time);
+        wakeupTime = findViewById(R.id.wakeup_time);
+
+        bedtimeTime.setText(savedBedtime != null ? savedBedtime : sleepView.getBedtime());
+        wakeupTime.setText(savedWakeup != null ? savedWakeup : sleepView.getWakeup());
 
     }
 

@@ -84,12 +84,6 @@ public class SleepCircleView extends View {
         String bedtimeStr = angleToTimeString(bedtimeAngle);
         String wakeupStr = angleToTimeString(wakeupAngle);
 
-        // Draw bedtime label
-        canvas.drawText("Bedtime: " + bedtimeStr, centerX, centerY + radius + 60, textPaint);
-
-        // Draw wake-up label
-        canvas.drawText("Wake-up: " + wakeupStr, centerX, centerY + radius + 120, textPaint);
-
     }
 
     private String angleToTimeString(double angle) {

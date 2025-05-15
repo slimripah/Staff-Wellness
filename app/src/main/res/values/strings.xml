@@ -146,5 +146,8 @@
 
     <string name="schedule_one">Edit Your Schedule</string>
     <string name="schedule_two">Save</string>
+    <string name="schedule_three">Bedtime</string>
+    <string name="schedule_four">Wake Up</string>
+    <string name="schedule_five"></string>
 
 </resources>
