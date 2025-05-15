@@ -86,6 +86,14 @@ public class Schedule extends AppCompatActivity {
         bedtimeTime.setText(savedBedtime != null ? savedBedtime : sleepView.getBedtime());
         wakeupTime.setText(savedWakeup != null ? savedWakeup : sleepView.getWakeup());
 
+        sleepView.setOnTimeChangeListener(new SleepCircleView.OnTimeChangeListener() {
+            @Override
+            public void onTimeChanged(String bedtime, String wakeup) {
+                bedtimeTime.setText(bedtime);
+                wakeupTime.setText(wakeup);
+            }
+        });
+
     }
 
     private int convertToMinutes(String timeStr) {
