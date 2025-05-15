@@ -15,6 +15,22 @@
         android:fontFamily="@font/lineto_circular_pro_bold"
         android:text="@string/schedule_one" />
 
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="265dp"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/ic_moon" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="390dp"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/ic_sun" />
+
     <www.minet.staffwellness.SleepCircleView
         android:id="@+id/sleep_circle"
         android:layout_width="match_parent"
