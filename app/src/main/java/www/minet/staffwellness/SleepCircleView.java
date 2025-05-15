@@ -73,14 +73,27 @@ public class SleepCircleView extends View {
         float sweepAngle = (float) ((wakeupAngle - bedtimeAngle + 360) % 360);
         canvas.drawArc(arcBounds, startAngle, sweepAngle, false, arcPaint);
 
-        // Draw clock labels (1 to 12) around the circle
-        float labelRadius = radius - 30;
+        // Draw clock numbers inside the ring
         for (int i = 0; i < 12; i++) {
-            int hour = (i == 0) ? 12 : i;
-            double angle = Math.toRadians(i * 30 - 90);
-            float x = (float) (centerX + labelRadius * Math.cos(angle));
-            float y = (float) (centerY + labelRadius * Math.sin(angle)) + 10;
-            canvas.drawText(String.valueOf(hour), x, y, clockLabelPaint);
+            int hour = (i * 2) % 24;  // every 2 hours
+            double angle = Math.toRadians(i * 30); // 30 degrees per label
+
+            float labelRadius = radius - 50; // adjust so numbers are inside the ring
+            float x = (float) (centerX + labelRadius * Math.cos(angle - Math.PI / 2)); // offset by -90°
+            float y = (float) (centerY + labelRadius * Math.sin(angle - Math.PI / 2)) + 10; // vertical tweak
+
+            String label;
+            if (hour == 0 || hour == 24) {
+                label = "12 AM";
+            } else if (hour == 12) {
+                label = "12 PM";
+            } else if (hour < 12) {
+                label = hour + " AM";
+            } else {
+                label = (hour - 12) + " PM";
+            }
+
+            canvas.drawText(label, x, y, clockLabelPaint);
         }
 
         // Draw bedtime thumb
@@ -180,4 +193,5 @@ public class SleepCircleView extends View {
         this.wakeupAngle = (minutes / 4) % 360;
         invalidate();
     }
+
 }
