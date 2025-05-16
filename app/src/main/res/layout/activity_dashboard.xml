@@ -375,7 +375,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/promotion"
+                        android:id="@+id/calories"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -397,6 +397,7 @@
                                 android:background="@drawable/bg_circle_two">
 
                                 <ImageView
+                                    android:id="@+id/ic_flame"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_centerInParent="true"
