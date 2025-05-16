@@ -560,7 +560,6 @@
                 android:layout_height="100dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:transitionName="popup"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
@@ -573,7 +572,6 @@
                         android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:transitionName="levitate"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
                         app:lottie_rawRes="@raw/sumo" />
