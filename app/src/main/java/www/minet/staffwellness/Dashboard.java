@@ -56,6 +56,7 @@ public class Dashboard extends AppCompatActivity {
     Button heart;
     Button schedule;
     Button bmi;
+    Button sleep;
     SharedPreferences prefs;
     String savedBedtime;
     String savedWakeup;
@@ -77,6 +78,7 @@ public class Dashboard extends AppCompatActivity {
         heart = findViewById(R.id.btn_heart);
         schedule = findViewById(R.id.btn_schedule);
         bmi = findViewById(R.id.btn_bmi);
+        sleep = findViewById(R.id.btn_sleep_chart);
 
         prefs = getSharedPreferences("sleep_schedule", MODE_PRIVATE);
         savedBedtime = prefs.getString("bedtime", null);
@@ -151,6 +153,11 @@ public class Dashboard extends AppCompatActivity {
             ActivityOptions option = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
 
             startActivityForResult(intent, 100, option.toBundle()); // 100 = requestCode
+        });
+
+        sleep.setOnClickListener(v -> {
+            Intent intent = new Intent(Dashboard.this, DayActivity.class);
+            startActivity(intent);
         });
 
         typeface = ResourcesCompat.getFont(this, R.font.lineto_circular_pro_bold);
