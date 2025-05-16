@@ -111,7 +111,18 @@ public class Dashboard extends AppCompatActivity {
 
         schedule.setOnClickListener(v -> {
             Intent intent = new Intent(Dashboard.this, Schedule.class);
-            startActivityForResult(intent, 100); // 100 = requestCode
+
+            //add transition
+            Pair[] pairs = new Pair[6];
+            pairs[0] = new Pair<View, String>(findViewById(R.id.ic_bed),"mattress");
+            pairs[1] = new Pair<View, String>(findViewById(R.id.title_bedtime),"bed");
+            pairs[2] = new Pair<View, String>(findViewById(R.id.go_bed),"bedtime");
+            pairs[3] = new Pair<View, String>(findViewById(R.id.ic_alarm),"clock");
+            pairs[4] = new Pair<View, String>(findViewById(R.id.title_alarm),"alarm");
+            pairs[5] = new Pair<View, String>(findViewById(R.id.go_up),"alarmTime");
+            ActivityOptions option = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
+
+            startActivityForResult(intent, 100, option.toBundle()); // 100 = requestCode
         });
 
         typeface = ResourcesCompat.getFont(this, R.font.lineto_circular_pro_bold);

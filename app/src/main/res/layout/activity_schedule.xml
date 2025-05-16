@@ -63,6 +63,7 @@
                 android:contentDescription="@string/content_description"
                 android:src="@drawable/ic_bed"
                 android:tint="#668c5c"
+                android:transitionName="mattress"
                 tools:ignore="UseAppTint" />
 
             <TextView
@@ -71,7 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:fontFamily="@font/lineto_circular_pro_bold"
-                android:text="@string/schedule_three" />
+                android:text="@string/schedule_three"
+                android:transitionName="bed" />
         </LinearLayout>
 
         <TextView
@@ -80,7 +82,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/lineto_circular_pro_bold"
-            android:text="" />
+            android:text=""
+            android:transitionName="bedtime" />
     </LinearLayout>
 
     <!-- Wake-up Info -->
@@ -106,6 +109,7 @@
                 android:contentDescription="@string/content_description"
                 android:src="@drawable/ic_alarm"
                 android:tint="#668c5c"
+                android:transitionName="clock"
                 tools:ignore="UseAppTint" />
 
             <TextView
@@ -114,7 +118,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:fontFamily="@font/lineto_circular_pro_bold"
-                android:text="@string/schedule_four" />
+                android:text="@string/schedule_four"
+                android:transitionName="alarm" />
         </LinearLayout>
 
         <TextView
@@ -123,7 +128,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/lineto_circular_pro_bold"
-            android:text="" />
+            android:text=""
+            android:transitionName="alarmTime" />
 
     </LinearLayout>
 

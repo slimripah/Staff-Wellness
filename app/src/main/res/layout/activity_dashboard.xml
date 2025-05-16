@@ -674,15 +674,18 @@
                                 android:contentDescription="@string/content_description"
                                 android:src="@drawable/ic_bed"
                                 android:tint="#668c5c"
+                                android:transitionName="mattress"
                                 tools:ignore="UseAppTint" />
 
                             <TextView
+                                android:id="@+id/title_bedtime"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:layout_toEndOf="@id/ic_bed"
                                 android:fontFamily="@font/lineto_circular_pro_bold"
-                                android:text="@string/sleep_two" />
+                                android:text="@string/sleep_two"
+                                android:transitionName="bed" />
 
                             <TextView
                                 android:id="@+id/go_bed"
@@ -691,7 +694,8 @@
                                 android:layout_below="@id/ic_bed"
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/lineto_circular_pro_bold"
-                                android:text="@string/sleep_three" />
+                                android:text="@string/sleep_three"
+                                android:transitionName="bedtime" />
 
                             <ImageView
                                 android:id="@+id/ic_alarm"
@@ -702,9 +706,11 @@
                                 android:contentDescription="@string/content_description"
                                 android:src="@drawable/ic_alarm"
                                 android:tint="#668c5c"
-                                tools:ignore="UseAppTint" />
+                                android:transitionName="clock"
+                                tools:ignore="TooManyViews,UseAppTint" />
 
                             <TextView
+                                android:id="@+id/title_alarm"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/go_bed"
@@ -713,6 +719,7 @@
                                 android:layout_toEndOf="@id/ic_alarm"
                                 android:fontFamily="@font/lineto_circular_pro_bold"
                                 android:text="@string/sleep_four"
+                                android:transitionName="alarm"
                                 tools:ignore="TooManyViews" />
 
                             <TextView
@@ -723,6 +730,7 @@
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/lineto_circular_pro_bold"
                                 android:text="@string/sleep_five"
+                                android:transitionName="alarmTime"
                                 tools:ignore="TooManyViews" />
 
                         </RelativeLayout>
