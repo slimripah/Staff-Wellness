@@ -148,6 +148,14 @@
     <string name="schedule_two">Save</string>
     <string name="schedule_three">Bedtime</string>
     <string name="schedule_four">Wake Up</string>
-    <string name="schedule_five"></string>
+
+    <string name="bmi_one">weight in kgs</string>
+    <string name="bmi_two">73</string>
+    <string name="bmi_three">height in cms</string>
+    <string name="bmi_four">180</string>
+    <string name="bmi_five">body mass index,</string>
+    <string name="bmi_six">18.8</string>
+    <string name="bmi_seven">pt</string>
+    <string name="bmi_eight">healthy</string>
 
 </resources>

@@ -1,12 +1,14 @@
 package www.minet.staffwellness;
 
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Pair;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -53,6 +55,7 @@ public class Dashboard extends AppCompatActivity {
     Button calories;
     Button heart;
     Button schedule;
+    Button bmi;
     SharedPreferences prefs;
     String savedBedtime;
     String savedWakeup;
@@ -73,6 +76,8 @@ public class Dashboard extends AppCompatActivity {
         calories = findViewById(R.id.btn_calories);
         heart = findViewById(R.id.btn_heart);
         schedule = findViewById(R.id.btn_schedule);
+        bmi = findViewById(R.id.btn_bmi);
+
         prefs = getSharedPreferences("sleep_schedule", MODE_PRIVATE);
         savedBedtime = prefs.getString("bedtime", null);
         savedWakeup = prefs.getString("wakeup", null);
@@ -103,10 +108,33 @@ public class Dashboard extends AppCompatActivity {
 
             //add transition
             Pair[] pairs = new Pair[1];
-            pairs[0] = new Pair<View, String>(findViewById(R.id.lottie_heartbeat),"pulsating");
+            pairs[0] = new Pair<View, String>(findViewById(R.id.lottie_heartbeat), "pulsating");
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
 
             startActivity(intent, options.toBundle());
+        });
+
+        bmi.setOnClickListener(v -> {
+
+            // Inflate the custom layout for the popup
+            LayoutInflater inflater = LayoutInflater.from(Dashboard.this);
+            View popupView = inflater.inflate(R.layout.bmi_popup, null);
+
+            // Build the AlertDialog
+            AlertDialog.Builder builder = new AlertDialog.Builder(Dashboard.this);
+            builder.setView(popupView);
+
+            AlertDialog dialog = builder.create();
+
+            // Ensure it's dismissible and styled with rounded transparent background
+            dialog.setCancelable(true);
+            if (dialog.getWindow() != null) {
+                dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            }
+
+            // Show the popup
+            dialog.show();
+
         });
 
         schedule.setOnClickListener(v -> {
@@ -114,12 +142,12 @@ public class Dashboard extends AppCompatActivity {
 
             //add transition
             Pair[] pairs = new Pair[6];
-            pairs[0] = new Pair<View, String>(findViewById(R.id.ic_bed),"mattress");
-            pairs[1] = new Pair<View, String>(findViewById(R.id.title_bedtime),"bed");
-            pairs[2] = new Pair<View, String>(findViewById(R.id.go_bed),"bedtime");
-            pairs[3] = new Pair<View, String>(findViewById(R.id.ic_alarm),"clock");
-            pairs[4] = new Pair<View, String>(findViewById(R.id.title_alarm),"alarm");
-            pairs[5] = new Pair<View, String>(findViewById(R.id.go_up),"alarmTime");
+            pairs[0] = new Pair<View, String>(findViewById(R.id.ic_bed), "mattress");
+            pairs[1] = new Pair<View, String>(findViewById(R.id.title_bedtime), "bed");
+            pairs[2] = new Pair<View, String>(findViewById(R.id.go_bed), "bedtime");
+            pairs[3] = new Pair<View, String>(findViewById(R.id.ic_alarm), "clock");
+            pairs[4] = new Pair<View, String>(findViewById(R.id.title_alarm), "alarm");
+            pairs[5] = new Pair<View, String>(findViewById(R.id.go_up), "alarmTime");
             ActivityOptions option = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
 
             startActivityForResult(intent, 100, option.toBundle()); // 100 = requestCode
