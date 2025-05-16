@@ -5,6 +5,93 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#070f23"
     tools:context=".NightActivity">
+
+    <TextView
+        android:id="@+id/goodnight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/lineto_circular_pro_bold"
+        android:text="@string/sleepCounterFour"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/textclock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lineto_circular_pro_bold"
+        android:format24Hour="HH:mm"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goodnight" />
+
+    <ImageView
+        android:id="@+id/moonimageview"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="200dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description"
+        android:scaleType="centerInside"
+        android:src="@drawable/moon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textclock" />
+
+    <ImageView
+        android:id="@+id/slideupmoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/slideupmoon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/moonimageview"
+        app:layout_constraintStart_toStartOf="@id/moonimageview"
+        app:layout_constraintTop_toBottomOf="@id/moonimageview" />
+
+    <TextView
+        android:id="@+id/titlemoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/lineto_circular_pro_bold"
+        android:text="@string/sleepCounterFive"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/slideupmoon"
+        app:layout_constraintEnd_toEndOf="@id/slideupmoon"
+        app:layout_constraintStart_toStartOf="@id/slideupmoon"
+        app:layout_constraintTop_toTopOf="@id/slideupmoon" />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/arrowup"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/titlemoon"
+        app:layout_constraintEnd_toEndOf="@id/slideupmoon"
+        app:layout_constraintStart_toStartOf="@id/slideupmoon"
+        app:layout_constraintTop_toTopOf="@id/slideupmoon"
+        tools:ignore="UseAppTint" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
