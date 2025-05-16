@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DayActivity">
+
+    <TextView
+        android:id="@+id/timeDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/lineto_circular_pro_bold"
+        android:text="@string/sleepCounterOne"
+        android:textColor="#9296a3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/locDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/lineto_circular_pro_bold"
+        android:text="@string/sleepCounterTwo"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeDay" />
+
+    <ImageView
+        android:id="@+id/sunImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="200dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description"
+        android:scaleType="centerInside"
+        android:src="@drawable/sun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/locDay" />
+
+    <ImageView
+        android:id="@+id/slideUpSun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/slideupsun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/sunImageView"
+        app:layout_constraintStart_toStartOf="@id/sunImageView"
+        app:layout_constraintTop_toBottomOf="@id/sunImageView" />
+
+    <TextView
+        android:id="@+id/detailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/lineto_circular_pro_bold"
+        android:text="@string/sleepCounterThree"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/slideUpSun"
+        app:layout_constraintEnd_toEndOf="@id/slideUpSun"
+        app:layout_constraintStart_toStartOf="@id/slideUpSun"
+        app:layout_constraintTop_toTopOf="@id/slideUpSun" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/arrowup"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/detailTitle"
+        app:layout_constraintEnd_toEndOf="@id/slideUpSun"
+        app:layout_constraintStart_toStartOf="@id/slideUpSun"
+        app:layout_constraintTop_toTopOf="@id/slideUpSun"
+        tools:ignore="UseAppTint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

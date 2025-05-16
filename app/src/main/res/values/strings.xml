@@ -158,4 +158,20 @@
     <string name="bmi_seven">pt</string>
     <string name="bmi_eight">healthy</string>
 
+    <string name="sleepCounterOne">date today</string>
+    <string name="sleepCounterTwo">Good morning</string>
+    <string name="sleepCounterThree">swipe up to start tracking</string>
+    <string name="sleepCounterFour">Good night</string>
+    <string name="sleepCounterFive">swipe up to stop tracking</string>
+    <string name="sleepCounterSix">Sleep Analysis</string>
+    <string name="sleepCounterSeven">0%</string>
+    <string name="sleepCounterEight">sleep duration</string>
+    <string name="sleepCounterNine">Don’t give up on your dreams so soon, sleep longer</string>
+    <string name="sleepCounterTen">Sleep Information</string>
+    <string name="sleepCounterEleven">00:00</string>
+    <string name="sleepCounterTwelve">Went to sleep</string>
+    <string name="sleepCounterThirteen">Went to sleep</string>
+    <string name="sleepCounterFourteen">Wake up</string>
+    <string name="sleepCounterFifteen">Back to home</string>
+
 </resources>
