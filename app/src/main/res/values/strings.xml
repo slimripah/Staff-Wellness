@@ -174,4 +174,13 @@
     <string name="sleepCounterFourteen">Wake up</string>
     <string name="sleepCounterFifteen">Back to home</string>
 
+    <string name="leaderboard_nine">Evans</string>
+    <string name="leaderboard_ten">Watson</string>
+    <string name="leaderboard_eleven">James</string>
+    <string name="leaderboard_twelve">Place</string>
+    <string name="leaderboard_thirteen">Name</string>
+    <string name="leaderboard_fourteen">Department</string>
+    <string name="leaderboard_fifteen">Steps</string>
+    <string name="leaderboard_sixteen">ICT</string>
+
 </resources>

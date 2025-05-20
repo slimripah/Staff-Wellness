@@ -15,9 +15,6 @@
         android:theme="@style/Theme.StaffWellness"
         tools:targetApi="31">
         <activity
-            android:name=".Leadsplash"
-            android:exported="false" />
-        <activity
             android:name=".Leaderboard"
             android:exported="false" />
         <activity

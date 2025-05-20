@@ -163,14 +163,8 @@ public class Dashboard extends AppCompatActivity {
         });
 
         leaderboard.setOnClickListener(v -> {
-            Intent intent = new Intent(Dashboard.this, Leadsplash.class);
-
-            //add transition
-            Pair[] pairs = new Pair[1];
-            pairs[0] = new Pair<View, String>(findViewById(R.id.relay_progressBars), "circles");
-            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
-            startActivity(intent, options.toBundle());
-
+            Intent intent = new Intent(Dashboard.this, Leaderboard.class);
+            startActivity(intent);
         });
 
         typeface = ResourcesCompat.getFont(this, R.font.lineto_circular_pro_bold);

@@ -1,6 +1,10 @@
 package www.minet.staffwellness;
 
+import android.animation.ValueAnimator;
 import android.os.Bundle;
+import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +26,24 @@ public class Leaderboard extends AppCompatActivity {
             return insets;
         });
 
+        animateBarHeight(R.id.bar_first, 180);
+        animateBarHeight(R.id.bar_second, 150);
+        animateBarHeight(R.id.bar_third, 130);
+
+    }
+
+    private void animateBarHeight(int viewId, int targetDp) {
+        final LinearLayout bar = findViewById(viewId);
+        final int targetPx = (int) (targetDp * getResources().getDisplayMetrics().density);
+        ValueAnimator animator = ValueAnimator.ofInt(0, targetPx);
+        animator.setDuration(3000);
+        animator.setInterpolator(new DecelerateInterpolator());
+        animator.addUpdateListener(animation -> {
+            ViewGroup.LayoutParams params = bar.getLayoutParams();
+            params.height = (int) animation.getAnimatedValue();
+            bar.setLayoutParams(params);
+        });
+        animator.start();
     }
 
 }
