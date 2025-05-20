@@ -97,6 +97,7 @@
                 android:textColor="@color/black" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/relay_progressBars"
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
                 android:layout_margin="20dp"
@@ -226,7 +227,8 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="182dp"
                     android:layout_marginTop="50dp"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    android:transitionName="circles">
 
                     <com.mikhaellopez.circularprogressbar.CircularProgressBar
                         android:id="@+id/progressBarBlue"
@@ -268,6 +270,12 @@
                         app:cpb_start_angle="0" />
 
                 </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_leaderboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/clear" />
 
             </androidx.cardview.widget.CardView>
 

@@ -57,6 +57,7 @@ public class Dashboard extends AppCompatActivity {
     Button schedule;
     Button bmi;
     Button sleep;
+    Button leaderboard;
     SharedPreferences prefs;
     String savedBedtime;
     String savedWakeup;
@@ -79,6 +80,7 @@ public class Dashboard extends AppCompatActivity {
         schedule = findViewById(R.id.btn_schedule);
         bmi = findViewById(R.id.btn_bmi);
         sleep = findViewById(R.id.btn_sleep_chart);
+        leaderboard = findViewById(R.id.btn_leaderboard);
 
         prefs = getSharedPreferences("sleep_schedule", MODE_PRIVATE);
         savedBedtime = prefs.getString("bedtime", null);
@@ -158,6 +160,17 @@ public class Dashboard extends AppCompatActivity {
         sleep.setOnClickListener(v -> {
             Intent intent = new Intent(Dashboard.this, DayActivity.class);
             startActivity(intent);
+        });
+
+        leaderboard.setOnClickListener(v -> {
+            Intent intent = new Intent(Dashboard.this, Leadsplash.class);
+
+            //add transition
+            Pair[] pairs = new Pair[1];
+            pairs[0] = new Pair<View, String>(findViewById(R.id.relay_progressBars), "circles");
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
+            startActivity(intent, options.toBundle());
+
         });
 
         typeface = ResourcesCompat.getFont(this, R.font.lineto_circular_pro_bold);

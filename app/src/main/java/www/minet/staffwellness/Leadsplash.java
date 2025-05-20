@@ -1,6 +1,8 @@
 package www.minet.staffwellness;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +23,17 @@ public class Leadsplash extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //Function
+        int SPLASH_TIMER = 3000;
+
+        new Handler().postDelayed(() -> {
+
+            Intent intent = new Intent(getApplicationContext(), Leaderboard.class);
+            startActivity(intent);
+            finish();
+
+        }, SPLASH_TIMER);
 
     }
 
