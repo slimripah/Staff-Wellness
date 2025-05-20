@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -11,115 +12,52 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Top row with avatars and names -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <!-- second -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/circle_mask"
-                    android:contentDescription="@string/content_description"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pp2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/leaderboard_four"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <!-- first -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/circle_mask"
-                    android:contentDescription="@string/content_description"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_pic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/leaderboard_six"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <!-- third -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/circle_mask"
-                    android:contentDescription="@string/content_description"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pp3" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/leaderboard_eight"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
         <!-- Bar Chart Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="100dp"
             android:baselineAligned="false"
-            android:gravity="bottom"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="3"
+            tools:ignore="UselessParent">
 
             <!-- 2nd -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:layout_weight="1"
                 android:gravity="bottom|center_horizontal"
                 android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="22.5dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/content_description"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pp2" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_six" />
 
                 <LinearLayout
                     android:layout_width="70dp"
@@ -139,10 +77,39 @@
             <!-- 1st -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:layout_weight="1"
                 android:gravity="bottom|center_horizontal"
                 android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="22.5dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/content_description"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_pic" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_four" />
 
                 <LinearLayout
                     android:layout_width="70dp"
@@ -160,10 +127,39 @@
             <!-- 3rd -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:layout_weight="1"
                 android:gravity="bottom|center_horizontal"
                 android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="22.5dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/content_description"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pp3" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lineto_circular_pro_bold"
+                    android:text="@string/leaderboard_eight" />
 
                 <LinearLayout
                     android:layout_width="70dp"
