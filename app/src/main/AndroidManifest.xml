@@ -15,6 +15,9 @@
         android:theme="@style/Theme.StaffWellness"
         tools:targetApi="31">
         <activity
+            android:name=".SignUpFour"
+            android:exported="false" />
+        <activity
             android:name=".SignUpThree"
             android:exported="false" />
         <activity
