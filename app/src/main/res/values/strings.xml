@@ -17,8 +17,11 @@
     <string name="first_name">First Name</string>
     <string name="second_name">Second Name</string>
     <string name="next">Next</string>
-
     <string name="gender">Choose Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="dob">Date Of Birth</string>
+
     <string name="email">Email</string>
     <string name="phoneNo">Phone number</string>
     <string name="finish">Finish</string>
