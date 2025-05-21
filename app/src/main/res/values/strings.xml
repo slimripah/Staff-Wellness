@@ -5,6 +5,27 @@
     <string name="content_description">image</string>
     <string name="powered">powered by minet</string>
 
+    <!-- Login Signup -->
+    <string name="login">Login</string>
+    <string name="login_desc">welcome back</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="gender">Choose Gender</string>
+    <string name="email">Email</string>
+    <string name="phoneNo">Phone number</string>
+    <string name="forget">forget password</string>
+    <string name="finish">Finish</string>
+    <string name="verify">Verify</string>
+    <string name="otp">Verification Code</string>
+    <string name="otp_desc">Please wait for the one time pin to be added automatically</string>
+    <string name="forget_detail">Please enter the phone number used to create this account </string>
+    <string name="new_credentials">New Credentials </string>
+    <string name="new_credentials_desc">Your Identity has been verified. Please enter new password </string>
+    <string name="new_password">New password </string>
+    <string name="confirm_password">Confirm password </string>
+    <string name="password_updated">Password Updated </string>
+    <string name="password_updated_success">Your password been updated successfully </string>
+
     <string name="salute_one">Top of the morning,</string>
     <string name="salute_two">How is it going?</string>
     <string name="salute_three">Burning the midnight oil?</string>

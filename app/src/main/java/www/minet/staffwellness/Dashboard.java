@@ -114,8 +114,8 @@ public class Dashboard extends AppCompatActivity {
             Pair[] pairs = new Pair[1];
             pairs[0] = new Pair<View, String>(findViewById(R.id.lottie_heartbeat), "pulsating");
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Dashboard.this, pairs);
-
             startActivity(intent, options.toBundle());
+
         });
 
         bmi.setOnClickListener(v -> {
