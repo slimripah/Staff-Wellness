@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_margin="30dp"
+    android:orientation="vertical"
     tools:context=".Login">
 
     <TextView
@@ -115,7 +115,7 @@
 
             <Button
                 android:id="@+id/btn_login"
-                android:layout_width="135dp"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
@@ -129,27 +129,16 @@
 
         </RelativeLayout>
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="5dp">
-
         <Button
             android:id="@+id/forget"
-            android:layout_width="230dp"
+            android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/bg_white_button"
+            android:layout_alignParentEnd="true"
+            android:background="@color/clear"
+            android:layout_below="@id/log_rel"
             android:fontFamily="@font/lineto_circular_pro_bold"
             android:text="@string/forget"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
+            android:textAllCaps="false" />
 
     </RelativeLayout>
 

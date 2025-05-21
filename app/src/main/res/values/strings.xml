@@ -10,10 +10,10 @@
     <string name="login_desc">welcome back</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="forget">forgot password?</string>
     <string name="gender">Choose Gender</string>
     <string name="email">Email</string>
     <string name="phoneNo">Phone number</string>
-    <string name="forget">forget password</string>
     <string name="finish">Finish</string>
     <string name="verify">Verify</string>
     <string name="otp">Verification Code</string>
