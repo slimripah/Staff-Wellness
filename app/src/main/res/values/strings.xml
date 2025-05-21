@@ -12,6 +12,11 @@
     <string name="password">Password</string>
     <string name="forget">forgot password?</string>
     <string name="nuevo">don\'t have an account? sign up here</string>
+    <string name="signup">Sign Up</string>
+    <string name="signup_desc">create account</string>
+    <string name="first_name">First Name</string>
+    <string name="second_name">Second Name</string>
+    <string name="next">Next</string>
 
     <string name="gender">Choose Gender</string>
     <string name="email">Email</string>
