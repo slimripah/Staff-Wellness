@@ -50,4 +50,7 @@ dependencies {
     //lottie animations
     implementation (libs.lottie)
 
+    //OTP Pin View Design
+    implementation ("io.github.chaosleung:pinview:1.4.4")
+
 }
