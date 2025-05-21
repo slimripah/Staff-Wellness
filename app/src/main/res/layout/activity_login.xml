@@ -27,15 +27,6 @@
         android:fontFamily="@font/lineto_circular_pro_medium"
         android:text="@string/login_desc" />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="55dp"
-        android:contentDescription="@string/content_description"
-        android:src="@drawable/logo"
-        android:transitionName="login" />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

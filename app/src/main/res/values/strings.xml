@@ -51,6 +51,7 @@
     <string name="email">Email</string>
     <string name="phoneNo">Phone number</string>
     <string name="finish">Finish</string>
+
     <string name="verify">Verify</string>
     <string name="otp">Verification Code</string>
     <string name="otp_desc">Please wait for the one time pin to be added automatically</string>

@@ -1,6 +1,8 @@
 package www.minet.staffwellness;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Login extends AppCompatActivity {
+
+    Button login;
+    Button forgot;
+    Button create;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,31 @@ public class Login extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        login = findViewById(R.id.btn_login);
+        forgot = findViewById(R.id.btn_forget);
+        create = findViewById(R.id.btn_create);
+
+        login.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Login.this, Dashboard.class);
+            startActivity(intent);
+
+        });
+
+        forgot.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Login.this, ForgetPasswordOne.class);
+            startActivity(intent);
+
+        });
+
+        create.setOnClickListener(v -> {
+
+            Intent intent = new Intent(Login.this, SignUpOne.class);
+            startActivity(intent);
+
         });
 
     }
