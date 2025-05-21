@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="30dp"
     android:orientation="vertical"
-    android:transitionName="transition_signup"
-    tools:context=".SignUpOne">
+    tools:context=".SignUpThree">
 
     <TextView
         android:id="@+id/sign_title"
@@ -37,11 +36,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/lineto_circular_pro_medium"
-            android:text="@string/first_name"
+            android:text="@string/staff"
             android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/signup_firstName"
+            android:id="@+id/signup_staff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -52,7 +51,7 @@
                 android:layout_height="45dp"
                 android:background="@drawable/bg_edit_text"
                 android:fontFamily="@font/lineto_circular_pro_book"
-                android:inputType="textPersonName"
+                android:inputType="textCapWords"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="#101010" />
@@ -64,56 +63,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/lineto_circular_pro_medium"
-            android:text="@string/second_name"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:text="@string/department"
+            android:textColor="@color/black" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/signup_secondName"
+        <Spinner
+            android:id="@+id/department_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="14sp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/bg_edit_text"
-                android:fontFamily="@font/lineto_circular_pro_book"
-                android:inputType="textPersonName"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:textColor="#101010" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/lineto_circular_pro_medium"
-            android:text="@string/username"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/signup_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="14sp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/bg_edit_text"
-                android:fontFamily="@font/lineto_circular_pro_book"
-                android:inputType="text"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:textColor="#101010" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/departments_array"
+            android:padding="12dp"
+            android:popupBackground="@android:color/white"
+            android:spinnerMode="dropdown" />
 
         <Button
             android:id="@+id/btn_next"

@@ -21,6 +21,32 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="dob">Date Of Birth</string>
+    <string name="staff">Staff Number</string>
+    <string name="department">Department</string>
+
+    <string-array name="departments_array">
+        <item>Actuarial Consulting</item>
+        <item>Administration</item>
+        <item>CIA</item>
+        <item>Minet Risk Solutions Claims</item>
+        <item>Finance</item>
+        <item>Healthcare</item>
+        <item>Human Resource</item>
+        <item>Information Technology</item>
+        <item>Internal Audit</item>
+        <item>Legal and Compliance</item>
+        <item>Life</item>
+        <item>Managed Medical Care</item>
+        <item>Marketing</item>
+        <item>Minet Re</item>
+        <item>Minet Risk Solutions Coast</item>
+        <item>Minet Risk Solutions Corporate</item>
+        <item>Retail and SME</item>
+        <item>Minet Risk Solutions Western</item>
+        <item>Pensions</item>
+        <item>Risk Consulting</item>
+        <item>Wellness</item>
+    </string-array>
 
     <string name="email">Email</string>
     <string name="phoneNo">Phone number</string>
