@@ -106,7 +106,8 @@
             android:fontFamily="@font/lineto_circular_pro_bold"
             android:text="@string/login"
             android:textColor="@color/white"
-            android:textSize="13sp" />
+            android:textSize="13sp"
+            android:transitionName="transition_login" />
 
         <Button
             android:id="@+id/btn_forget"
