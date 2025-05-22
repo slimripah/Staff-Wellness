@@ -61,7 +61,13 @@
     <string name="new_password">New password </string>
     <string name="confirm_password">Confirm password </string>
     <string name="password_updated">Password Updated </string>
-    <string name="password_updated_success">Your password been updated successfully </string>
+    <string name="password_updated_success">Your password been updated successfully</string>
+
+    <string name="fit_one">Google Fit</string>
+    <string name="fit_two">Google Fit is a free fitness tracking app developed by Google that allows users to track their activity and health data across various devices and apps.</string>
+    <string name="fit_three">To maximise your experience using this staff wellness app you need to download google fit from play store</string>
+    <string name="fit_four">Download</string>
+    <string name="fit_five">i have google fit installed</string>
 
     <string name="salute_one">Top of the morning,</string>
     <string name="salute_two">How is it going?</string>
