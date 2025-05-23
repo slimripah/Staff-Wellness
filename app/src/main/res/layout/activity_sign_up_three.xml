@@ -53,7 +53,7 @@
                 android:layout_height="45dp"
                 android:background="@drawable/bg_edit_text"
                 android:fontFamily="@font/lineto_circular_pro_book"
-                android:inputType="textCapWords"
+                android:inputType="number"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="#101010" />
