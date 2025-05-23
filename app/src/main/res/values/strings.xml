@@ -82,6 +82,10 @@
     <string name="emoji_two">😎</string>
     <string name="emoji_three">😅</string>
 
+    <string name="profile_one">Watson</string>
+    <string name="profile_two">Muturi</string>
+    <string name="profile_three">ICT</string>
+
     <string name="leaderboard_one">Daily Insights</string>
     <string name="leaderboard_two">leaderboard</string>
     <string name="leaderboard_three">4603</string>
