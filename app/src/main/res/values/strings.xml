@@ -72,6 +72,7 @@
     <string name="fit_seven">To access your health data sign in with your google account. Use the same google account you used to sign in to google fit.</string>
     <string name="fit_eight">sign in</string>
     <string name="fit_nine">add profile picture</string>
+    <string name="fit_ten">Account Created Successfully</string>
 
     <string name="salute_one">Top of the morning,</string>
     <string name="salute_two">How is it going?</string>
@@ -145,7 +146,7 @@
     <string name="step_three">Stats</string>
     <string name="step_four">Calories Burned</string>
     <string name="step_five">burned</string>
-    <string name="step_six">67 kcal</string>
+    <string name="step_six">67 KCal</string>
     <string name="step_seven">remaining</string>
     <string name="step_eight">23 kcal</string>
     <string name="step_nine">Distance Covered</string>

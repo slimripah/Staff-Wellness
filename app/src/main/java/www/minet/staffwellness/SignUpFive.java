@@ -33,7 +33,7 @@ public class SignUpFive extends AppCompatActivity {
 
         next.setOnClickListener(v -> {
 
-            Intent intent = new Intent(SignUpFive.this, Dashboard.class);
+            Intent intent = new Intent(SignUpFive.this, FitnessThree.class);
 
             //add transition
             Pair[] pairs = new Pair[3];

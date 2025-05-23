@@ -39,7 +39,7 @@
         android:textAlignment="center" />
 
     <Button
-        android:id="@+id/btn_download"
+        android:id="@+id/btn_sign_in"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -47,6 +47,7 @@
         android:background="@drawable/bg_black_rounded"
         android:fontFamily="@font/lineto_circular_pro_bold"
         android:text="@string/fit_eight"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:transitionName="fit" />
 
 </LinearLayout>

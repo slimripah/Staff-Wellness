@@ -1,6 +1,8 @@
 package www.minet.staffwellness;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +23,16 @@ public class FitnessThree extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        int SPLASH_TIMER = 4000;
+
+        new Handler().postDelayed(() -> {
+
+            Intent intent = new Intent(getApplicationContext(), FitnessOne.class);
+            startActivity(intent);
+            finish();
+
+        }, SPLASH_TIMER);
 
     }
 
