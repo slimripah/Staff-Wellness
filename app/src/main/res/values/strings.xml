@@ -146,7 +146,7 @@
     <string name="step_three">Stats</string>
     <string name="step_four">Calories Burned</string>
     <string name="step_five">burned</string>
-    <string name="step_six">67 KCal</string>
+    <string name="step_six">67 kcal</string>
     <string name="step_seven">remaining</string>
     <string name="step_eight">23 kcal</string>
     <string name="step_nine">Distance Covered</string>
@@ -180,7 +180,7 @@
 
     <string name="calory_one">Today</string>
     <string name="calory_two">623</string>
-    <string name="calory_three">kcal</string>
+    <string name="calory_three">KCal</string>
     <string name="calory_four">walking</string>
     <string name="calory_five">gym</string>
     <string name="calory_six">sports</string>
