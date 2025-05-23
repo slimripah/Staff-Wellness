@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -35,32 +34,42 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
             android:fontFamily="@font/lineto_circular_pro_medium"
-            android:text="@string/password"
+            android:text="@string/fit_nine"
             android:textColor="@color/black" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/signup_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:passwordToggleEnabled="true">
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bg_profile">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <ImageView
+                android:id="@+id/signup_profile"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/bg_edit_text"
-                android:fontFamily="@font/lineto_circular_pro_book"
-                android:inputType="textPassword"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:textColor="#101010" />
+                android:layout_height="match_parent"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/ic_add"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_profile" />
+
+            <Button
+                android:id="@+id/btn_add_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/clear" />
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/btn_next"
