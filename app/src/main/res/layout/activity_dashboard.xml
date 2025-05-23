@@ -37,6 +37,12 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/ic_pic" />
 
+                    <Button
+                        android:id="@+id/btn_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/clear" />
+
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>

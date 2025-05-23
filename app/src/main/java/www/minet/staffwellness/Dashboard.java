@@ -51,6 +51,7 @@ public class Dashboard extends AppCompatActivity {
 
     BarDataSet barDataSet;
 
+    Button profile;
     Button steps;
     Button calories;
     Button heart;
@@ -74,6 +75,7 @@ public class Dashboard extends AppCompatActivity {
             return insets;
         });
 
+        profile = findViewById(R.id.btn_profile);
         steps = findViewById(R.id.btn_steps);
         calories = findViewById(R.id.btn_calories);
         heart = findViewById(R.id.btn_heart);
@@ -95,6 +97,29 @@ public class Dashboard extends AppCompatActivity {
             goUp.setText(savedWakeup);
 
         }
+
+        profile.setOnClickListener(v -> {
+
+            // Inflate the custom layout for the popup
+            LayoutInflater inflater = LayoutInflater.from(Dashboard.this);
+            View popupView = inflater.inflate(R.layout.activity_profile, null);
+
+            // Build the AlertDialog
+            AlertDialog.Builder builder = new AlertDialog.Builder(Dashboard.this);
+            builder.setView(popupView);
+
+            AlertDialog dialog = builder.create();
+
+            // Ensure it's dismissible and styled with rounded transparent background
+            dialog.setCancelable(true);
+            if (dialog.getWindow() != null) {
+                dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            }
+
+            // Show the popup
+            dialog.show();
+
+        });
 
         steps.setOnClickListener(v -> {
             Intent intent = new Intent(Dashboard.this, Steps.class);
