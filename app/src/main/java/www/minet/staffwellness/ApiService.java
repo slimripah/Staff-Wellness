@@ -12,7 +12,7 @@ public class ApiService {
 
     @Multipart
     @POST("staffapi/signup.php")
-    Call<ResponseBody> registerUser(
+    Call<ResponseBody> uploadUser(
             @Part("firstname") RequestBody firstname,
             @Part("secondname") RequestBody secondname,
             @Part("username") RequestBody username,

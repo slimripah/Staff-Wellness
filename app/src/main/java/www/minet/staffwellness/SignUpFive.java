@@ -30,16 +30,17 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SignUpFive extends AppCompatActivity {
 
-    Button next;
-    Button profile;
+    Button next, profile;
     ImageView profileImage;
     Uri selectedImageUri;
     private static final int GALLERY_REQUEST_CODE = 101;
 
-    // Declare user data
+    // User data passed from previous activities
     String _firstname, _secondname, _username, _gender, _date, _staffnumber, _department, _email, _phonenumber, _password;
 
     @Override
@@ -60,7 +61,7 @@ public class SignUpFive extends AppCompatActivity {
 
         profile.setOnClickListener(v -> openGallery());
 
-        // Retrieve data from previous screens
+        // Get passed data
         Intent intent = getIntent();
         _firstname = intent.getStringExtra("firstname");
         _secondname = intent.getStringExtra("secondname");
@@ -77,9 +78,107 @@ public class SignUpFive extends AppCompatActivity {
             if (selectedImageUri == null) {
                 Toast.makeText(this, "Please upload a profile picture", Toast.LENGTH_SHORT).show();
             } else {
-                uploadDataToApi();
+                uploadDataToApi(
+                        selectedImageUri,
+                        _firstname,
+                        _secondname,
+                        _username,
+                        _gender,
+                        _date,
+                        _staffnumber,
+                        _department,
+                        _email,
+                        _phonenumber,
+                        _password
+                );
             }
         });
+    }
+
+    private void uploadDataToApi(
+            Uri imageUri,
+            String firstname,
+            String secondname,
+            String username,
+            String gender,
+            String date,
+            String staffnumber,
+            String department,
+            String email,
+            String phonenumber,
+            String password
+    ) {
+        try {
+            String imagePath = getRealPathFromURI(imageUri);
+            if (imagePath == null) {
+                Toast.makeText(this, "Unable to get file path", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            File file = new File(imagePath);
+            if (!file.exists()) {
+                Toast.makeText(this, "Image file does not exist", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            RequestBody imageBody = RequestBody.create(MediaType.parse("image/*"), file);
+            MultipartBody.Part imagePart = MultipartBody.Part.createFormData("profile_image", file.getName(), imageBody);
+
+            // Prepare other form data
+            RequestBody rbFirstname = RequestBody.create(MediaType.parse("text/plain"), firstname);
+            RequestBody rbSecondname = RequestBody.create(MediaType.parse("text/plain"), secondname);
+            RequestBody rbUsername = RequestBody.create(MediaType.parse("text/plain"), username);
+            RequestBody rbGender = RequestBody.create(MediaType.parse("text/plain"), gender);
+            RequestBody rbDate = RequestBody.create(MediaType.parse("text/plain"), date);
+            RequestBody rbStaffNumber = RequestBody.create(MediaType.parse("text/plain"), staffnumber);
+            RequestBody rbDepartment = RequestBody.create(MediaType.parse("text/plain"), department);
+            RequestBody rbEmail = RequestBody.create(MediaType.parse("text/plain"), email);
+            RequestBody rbPhone = RequestBody.create(MediaType.parse("text/plain"), phonenumber);
+            RequestBody rbPassword = RequestBody.create(MediaType.parse("text/plain"), password);
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl("http://YOUR_IP_ADDRESS/staffwellness/api/") // Update with your actual IP and endpoint
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+
+            ApiService apiService = retrofit.create(ApiService.class);
+
+            Call<ResponseBody> call = apiService.uploadUser(
+                    rbFirstname,
+                    rbSecondname,
+                    rbUsername,
+                    rbGender,
+                    rbDate,
+                    rbStaffNumber,
+                    rbDepartment,
+                    rbEmail,
+                    rbPhone,
+                    rbPassword,
+                    imagePart
+            );
+
+            call.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    if (response.isSuccessful()) {
+                        Toast.makeText(SignUpFive.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                        openNextPage();
+                    } else {
+                        Toast.makeText(SignUpFive.this, "Server Error: " + response.code(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    t.printStackTrace();
+                    Toast.makeText(SignUpFive.this, "Failure: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Exception: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
     }
 
     private void openGallery() {
@@ -91,53 +190,10 @@ public class SignUpFive extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == GALLERY_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
             selectedImageUri = data.getData();
             profileImage.setImageURI(selectedImageUri);
         }
-    }
-
-    private void uploadDataToApi() {
-        File imageFile = new File(getRealPathFromURI(selectedImageUri));
-
-        RequestBody firstname = RequestBody.create(MediaType.parse("text/plain"), _firstname);
-        RequestBody secondname = RequestBody.create(MediaType.parse("text/plain"), _secondname);
-        RequestBody username = RequestBody.create(MediaType.parse("text/plain"), _username);
-        RequestBody gender = RequestBody.create(MediaType.parse("text/plain"), _gender);
-        RequestBody date = RequestBody.create(MediaType.parse("text/plain"), _date);
-        RequestBody staffnumber = RequestBody.create(MediaType.parse("text/plain"), _staffnumber);
-        RequestBody department = RequestBody.create(MediaType.parse("text/plain"), _department);
-        RequestBody email = RequestBody.create(MediaType.parse("text/plain"), _email);
-        RequestBody phonenumber = RequestBody.create(MediaType.parse("text/plain"), _phonenumber);
-        RequestBody password = RequestBody.create(MediaType.parse("text/plain"), _password);
-
-        RequestBody requestFile = RequestBody.create(MediaType.parse(getMimeType(selectedImageUri)), imageFile);
-        MultipartBody.Part profile_image = MultipartBody.Part.createFormData("profile_image", imageFile.getName(), requestFile);
-
-        ApiService apiService = ApiClient.getClient().create(ApiService.class);
-
-        Call<ResponseBody> call = apiService.registerUser(
-                firstname, secondname, username, gender, date, staffnumber,
-                department, email, phonenumber, password, profile_image
-        );
-
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if (response.isSuccessful()) {
-                    Toast.makeText(SignUpFive.this, "Sign-up successful", Toast.LENGTH_SHORT).show();
-                    openNextPage();
-                } else {
-                    Toast.makeText(SignUpFive.this, "Failed to sign up. Try again.", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(SignUpFive.this, "Error: " + t.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        });
     }
 
     private void openNextPage() {
