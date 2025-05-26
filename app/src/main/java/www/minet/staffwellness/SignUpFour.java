@@ -114,7 +114,7 @@ public class SignUpFour extends AppCompatActivity {
             password.setError("please enter password");
             return false;
         } else if (!val.matches(checkPassword)) {
-            password.setError("Password should contain at-least 4 characters. White spaces are not allowed");
+            password.setError("Password should contain at-least 8 characters. White spaces are not allowed");
             return false;
         } else {
             password.setError(null);

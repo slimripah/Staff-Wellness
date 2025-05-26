@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -41,35 +42,41 @@
             android:text="@string/fit_nine"
             android:textColor="@color/black" />
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp"
-            android:background="@drawable/bg_profile">
+            app:cardCornerRadius="75dp"
+            android:layout_marginTop="80dp">
 
-            <ImageView
-                android:id="@+id/signup_profile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/content_description"
-                android:scaleType="fitXY" />
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp">
 
-            <ImageView
-                android:id="@+id/ic_add"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerInParent="true"
-                android:contentDescription="@string/content_description"
-                android:src="@drawable/ic_profile" />
+                <ImageView
+                    android:id="@+id/signup_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="fitXY" />
 
-            <Button
-                android:id="@+id/btn_add_profile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/clear" />
+                <ImageView
+                    android:id="@+id/ic_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/content_description"
+                    android:src="@drawable/ic_profile" />
 
-        </RelativeLayout>
+                <Button
+                    android:id="@+id/btn_add_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/clear" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <Button
             android:id="@+id/btn_next"
