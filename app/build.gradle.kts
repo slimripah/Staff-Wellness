@@ -51,6 +51,13 @@ dependencies {
     implementation (libs.lottie)
 
     //OTP Pin View Design
-    implementation ("io.github.chaosleung:pinview:1.4.4")
+    implementation (libs.chaosleung.pinview)
+
+    //API
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation ("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
 }
