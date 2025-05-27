@@ -141,7 +141,7 @@ public class SignUpFive extends AppCompatActivity {
             RequestBody rbPassword = createPartFromString(password);
 
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.1.4/staffapi/") // actual IP and endpoint
+                    .baseUrl("https://wellness.minet.co.ke/") // server base URL
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 

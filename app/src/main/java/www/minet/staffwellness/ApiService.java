@@ -11,7 +11,7 @@ import retrofit2.http.Part;
 public interface ApiService {
 
     @Multipart
-    @POST("signup.php")
+    @POST("signup")
     Call<ResponseBody> uploadUser(
             @Part("firstname") RequestBody firstname,
             @Part("secondname") RequestBody secondname,

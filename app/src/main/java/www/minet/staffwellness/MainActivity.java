@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
 
-            Intent intent = new Intent(getApplicationContext(), FitnessOne.class);
+            Intent intent = new Intent(getApplicationContext(), SignUpOne.class);
             startActivity(intent);
             finish();
 
