@@ -165,7 +165,6 @@ public class SignUpFive extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     if (response.isSuccessful()) {
-                        Toast.makeText(SignUpFive.this, "Registration successful!", Toast.LENGTH_SHORT).show();
                         openNextPage();
                     } else {
                         Toast.makeText(SignUpFive.this, "Server Error: " + response.code(), Toast.LENGTH_SHORT).show();
@@ -202,12 +201,7 @@ public class SignUpFive extends AppCompatActivity {
 
     private void openNextPage() {
         Intent intent = new Intent(SignUpFive.this, FitnessThree.class);
-        Pair[] pairs = new Pair[3];
-        pairs[0] = new Pair<>(findViewById(R.id.sign_title), "transition_text");
-        pairs[1] = new Pair<>(findViewById(R.id.sign_desc), "transition_desc");
-        pairs[2] = new Pair<>(findViewById(R.id.btn_next), "transition_next");
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SignUpFive.this, pairs);
-        startActivity(intent, options.toBundle());
+        startActivity(intent);
         finish();
     }
 
