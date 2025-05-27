@@ -43,6 +43,10 @@ public class SignUpFive extends AppCompatActivity {
     // User data passed from previous activities
     String _firstname, _secondname, _username, _gender, _date, _staffnumber, _department, _email, _phonenumber, _password;
 
+    private RequestBody createPartFromString(String value) {
+        return RequestBody.create(MediaType.parse("text/plain"), value == null ? "" : value);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,16 +129,16 @@ public class SignUpFive extends AppCompatActivity {
             MultipartBody.Part imagePart = MultipartBody.Part.createFormData("profile_image", file.getName(), imageBody);
 
             // Prepare other form data
-            RequestBody rbFirstname = RequestBody.create(MediaType.parse("text/plain"), firstname);
-            RequestBody rbSecondname = RequestBody.create(MediaType.parse("text/plain"), secondname);
-            RequestBody rbUsername = RequestBody.create(MediaType.parse("text/plain"), username);
-            RequestBody rbGender = RequestBody.create(MediaType.parse("text/plain"), gender);
-            RequestBody rbDate = RequestBody.create(MediaType.parse("text/plain"), date);
-            RequestBody rbStaffNumber = RequestBody.create(MediaType.parse("text/plain"), staffnumber);
-            RequestBody rbDepartment = RequestBody.create(MediaType.parse("text/plain"), department);
-            RequestBody rbEmail = RequestBody.create(MediaType.parse("text/plain"), email);
-            RequestBody rbPhone = RequestBody.create(MediaType.parse("text/plain"), phonenumber);
-            RequestBody rbPassword = RequestBody.create(MediaType.parse("text/plain"), password);
+            RequestBody rbFirstname = createPartFromString(firstname);
+            RequestBody rbSecondname = createPartFromString(secondname);
+            RequestBody rbUsername = createPartFromString(username);
+            RequestBody rbGender = createPartFromString(gender);
+            RequestBody rbDate = createPartFromString(date);
+            RequestBody rbStaffNumber = createPartFromString(staffnumber);
+            RequestBody rbDepartment = createPartFromString(department);
+            RequestBody rbEmail = createPartFromString(email);
+            RequestBody rbPhone = createPartFromString(phonenumber);
+            RequestBody rbPassword = createPartFromString(password);
 
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("http://192.168.1.4/staffapi/") // actual IP and endpoint

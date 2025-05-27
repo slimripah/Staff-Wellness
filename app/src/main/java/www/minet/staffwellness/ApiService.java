@@ -8,7 +8,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 
-public class ApiService {
+public interface ApiService {
 
     @Multipart
     @POST("staffapi/signup.php")
@@ -24,8 +24,6 @@ public class ApiService {
             @Part("phonenumber") RequestBody phonenumber,
             @Part("password") RequestBody password,
             @Part MultipartBody.Part profile_image
-    ) {
-        return null;
-    }
+    );
 
 }
