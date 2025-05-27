@@ -137,7 +137,7 @@ public class SignUpFive extends AppCompatActivity {
             RequestBody rbPassword = RequestBody.create(MediaType.parse("text/plain"), password);
 
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://YOUR_IP_ADDRESS/staffwellness/api/") // Update with your actual IP and endpoint
+                    .baseUrl("http://192.168.1.4/staffapi/") // actual IP and endpoint
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
@@ -223,4 +223,5 @@ public class SignUpFive extends AppCompatActivity {
         MimeTypeMap mime = MimeTypeMap.getSingleton();
         return mime.getExtensionFromMimeType(cR.getType(uri));
     }
+
 }
