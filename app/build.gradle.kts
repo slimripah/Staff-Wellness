@@ -60,4 +60,10 @@ dependencies {
     implementation (libs.okhttp)
     implementation (libs.logging.interceptor)
 
+    //google fit api
+    implementation (libs.play.services.fitness)
+
+    // google sign-in api
+    implementation(libs.play.services.auth)
+
 }
