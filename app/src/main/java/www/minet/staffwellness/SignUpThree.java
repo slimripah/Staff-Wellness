@@ -41,7 +41,7 @@ public class SignUpThree extends AppCompatActivity {
 
         next.setOnClickListener(v -> {
 
-            if(!validateStaffNumber() | !validateDepartment()) {
+            if (!validateStaffNumber() | !validateDepartment()) {
                 return;
             }
 
@@ -80,6 +80,7 @@ public class SignUpThree extends AppCompatActivity {
     }
 
     private boolean validateStaffNumber() {
+
         String checkspaces = "\\A\\w{1,20}\\z";
 
         String val = staffnumber.getEditText().getText().toString().trim();
@@ -105,6 +106,7 @@ public class SignUpThree extends AppCompatActivity {
     }
 
     private boolean validateDepartment() {
+
         if (departmentspinner.getSelectedItemPosition() == 0) {
             Toast.makeText(this, "Please select a department", Toast.LENGTH_SHORT).show();
             return false;
