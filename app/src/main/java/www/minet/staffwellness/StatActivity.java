@@ -60,6 +60,7 @@ public class StatActivity extends AppCompatActivity {
     }
 
     private void statset() {
+
         SharedPreferences tracking = getSharedPreferences("tracking", MODE_PRIVATE);
         ed = tracking.edit();
         Date curdate = new Date();
@@ -91,6 +92,7 @@ public class StatActivity extends AppCompatActivity {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
     }
 
     private void initUI() {

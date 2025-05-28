@@ -7,19 +7,19 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.os.Build;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
-import android.os.Build;
 
 import androidx.annotation.Nullable;
 
 public class SleepCircleView extends View {
 
-    private Paint circlePaint, arcPaint, thumbPaint, textPaint, clockLabelPaint;
+    private Paint circlePaint, arcPaint, textPaint, clockLabelPaint;
     private float thumbRadius = 30f;
     private RectF arcBounds;
 
@@ -38,13 +38,17 @@ public class SleepCircleView extends View {
     private Vibrator vibrator;
 
     private void vibrateOnChange() {
+
         if (vibrator != null && vibrator.hasVibrator()) {
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(10, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 vibrator.vibrate(10);
             }
+
         }
+
     }
 
     private void init() {
@@ -103,6 +107,7 @@ public class SleepCircleView extends View {
 
         // Draw clock numbers inside the ring
         for (int i = 0; i < 12; i++) {
+
             int hour = (i * 2) % 24;  // every 2 hours
             double angle = Math.toRadians(i * 30); // 30 degrees per label
 
@@ -130,10 +135,12 @@ public class SleepCircleView extends View {
             }
 
             canvas.drawText(label, x, y, clockLabelPaint);
+
         }
 
         // Draw minute tick marks inside the ring
         for (int i = 0; i < 60; i++) {
+
             double angle = Math.toRadians(i * 6 - 90); // 12 o'clock at top
 
             // Adjusted to draw ticks just inside the stroke
@@ -151,6 +158,7 @@ public class SleepCircleView extends View {
             tickPaint.setColor(Color.GRAY);
             tickPaint.setStrokeWidth(i % 5 == 0 ? 4 : 2);
             canvas.drawLine(startX, startY, endX, endY, tickPaint);
+
         }
 
 
@@ -240,6 +248,7 @@ public class SleepCircleView extends View {
         }
 
         return true;
+
     }
 
     public String getBedtime() {
