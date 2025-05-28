@@ -33,6 +33,7 @@ public class Leaderboard extends AppCompatActivity {
     }
 
     private void animateBarHeight(int viewId, int targetDp) {
+
         final LinearLayout bar = findViewById(viewId);
         final int targetPx = (int) (targetDp * getResources().getDisplayMetrics().density);
         ValueAnimator animator = ValueAnimator.ofInt(0, targetPx);
@@ -42,8 +43,11 @@ public class Leaderboard extends AppCompatActivity {
             ViewGroup.LayoutParams params = bar.getLayoutParams();
             params.height = (int) animation.getAnimatedValue();
             bar.setLayoutParams(params);
+
         });
+
         animator.start();
+
     }
 
 }
