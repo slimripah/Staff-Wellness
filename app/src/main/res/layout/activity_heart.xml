@@ -26,8 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_marginStart="30dp"
-            android:transitionName="pulsating"
             android:layout_marginTop="150dp"
+            android:transitionName="pulsating"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/heartbeat" />
