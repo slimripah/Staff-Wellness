@@ -84,15 +84,18 @@ public class SignUpTwo extends AppCompatActivity {
     }
 
     private boolean validateGender() {
+
         if (radioGroup.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select your gender", Toast.LENGTH_LONG).show();
             return false;
         } else {
             return true;
         }
+
     }
 
     private boolean validateAge() {
+
         int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         int userAge = datePicker.getYear();
         int isAgeValid = currentYear - userAge;
@@ -103,6 +106,7 @@ public class SignUpTwo extends AppCompatActivity {
         } else {
             return true;
         }
+
     }
 
 }
