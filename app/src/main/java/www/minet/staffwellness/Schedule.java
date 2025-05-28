@@ -86,27 +86,32 @@ public class Schedule extends AppCompatActivity {
         bedtimeTime.setText(savedBedtime != null ? savedBedtime : sleepView.getBedtime());
         wakeupTime.setText(savedWakeup != null ? savedWakeup : sleepView.getWakeup());
 
-        sleepView.setOnTimeChangeListener(new SleepCircleView.OnTimeChangeListener() {
-            @Override
-            public void onTimeChanged(String bedtime, String wakeup) {
-                bedtimeTime.setText(bedtime);
-                wakeupTime.setText(wakeup);
-            }
+        sleepView.setOnTimeChangeListener((bedtime, wakeup) -> {
+
+            bedtimeTime.setText(bedtime);
+            wakeupTime.setText(wakeup);
+
         });
 
     }
 
     private int convertToMinutes(String timeStr) {
+
         try {
+
             SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a", Locale.getDefault());
             Date date = sdf.parse(timeStr);
             Calendar cal = Calendar.getInstance();
             cal.setTime(date);
             return cal.get(Calendar.HOUR_OF_DAY) * 60 + cal.get(Calendar.MINUTE);
+
         } catch (ParseException e) {
+
             e.printStackTrace();
             return 0; // fallback
+
         }
+
     }
 
 }
