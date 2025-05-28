@@ -1,14 +1,11 @@
 package www.minet.staffwellness;
 
-import android.app.ActivityOptions;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Pair;
-import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -95,8 +92,11 @@ public class SignUpFive extends AppCompatActivity {
                         _phonenumber,
                         _password
                 );
+
             }
+
         });
+
     }
 
     private void uploadDataToApi(
@@ -112,6 +112,7 @@ public class SignUpFive extends AppCompatActivity {
             String phonenumber,
             String password
     ) {
+
         try {
             String imagePath = getRealPathFromURI(imageUri);
             if (imagePath == null) {
@@ -176,6 +177,7 @@ public class SignUpFive extends AppCompatActivity {
                     t.printStackTrace();
                     Toast.makeText(SignUpFive.this, "Failure: " + t.getMessage(), Toast.LENGTH_LONG).show();
                 }
+
             });
 
         } catch (Exception e) {
